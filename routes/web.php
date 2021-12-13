@@ -18,13 +18,13 @@ use App\Http\Controllers\CustomAuthController;
 
 Route::group(['middleware' => ['auth']], function() {
     Route::get('/training', [TraningController::class, 'index'])->name('training');
-    Route::post('/training/{id}', [TraningController::class, 'show'])->name('training_show');
     Route::get('/training/{id}', [TraningController::class, 'show'])->name('training_show');
     Route::post('/training/{id}', [TraningController::class, 'store'])->name('training_store');
+    
     Route::get('/test', [TraningController::class, 'index2'])->name('test');
-    Route::post('/test/{id}', [TraningController::class, 'show2'])->name('test_show');
     Route::get('/test/{id}', [TraningController::class, 'show2'])->name('test_show');
     Route::post('/test/{id}', [TraningController::class, 'store2'])->name('test_store');
+
     Route::get('/info', [TraningController::class, 'info'])->name('info');
 });
 

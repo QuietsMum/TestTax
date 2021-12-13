@@ -106,14 +106,14 @@
                                         <p id="caseDiscSmall" class="selectCaseText" style="color:#160B50; font-size:18px; font-weight:400; margin-bottom: 0rem; text-align:left">Кейс 1: Государственный служащий («М», ИИН 731201400135), в 2021 году</p>
                                     </div>
                                 </div>
-                                <div class="col-sm-2" style="padding-left: unset;"><button type="button" class="btn btnCustom3" id="showCaseBtn">Свернуть <img id="showCaseIcon" src="{{ asset('img/dropdownIconUpWhite.svg') }}" alt="" style="float:right; margin-top:10px"></button> </div>
+                                <div class="col-sm-2" style="padding-left: unset;"><button type="button" class="btn btnCustom3" id="showCaseBtn">Открыть <img id="showCaseIcon" src="{{ asset('img/dropdownIconWhite.svg') }}" alt="" style="float:right; margin-top:10px"></button> </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </nav>
             <div >
-                <div class="whiteBox2 open" id="showCaseBlock">
+                <div class="whiteBox2 close" id="showCaseBlock">
                     <p id="caseDisc">Государственный служащий («М», ИИН 731201400135), в 2021 году:</p>
                     <div id="caseDiscPlus" class="goldHighlight"></div>
                 </div>
@@ -132,13 +132,13 @@
                             </div>
                             <div class="col-sm-6" style="text-align: left;">
                                 <label class="formText" for="taxYearInput">2. Налоговый период:</label>
-                                <input type="number" class="formTextBox" style="width:10%" id="period" name="period" value="{{ old('period') }}"><span class="formText">год</span>
+                                <input type="number" class="formTextBox" style="width:5%" id="period" name="period" value="{{ old('period') }}"><span class="formText">год</span>
                             </div>
                         </div>
                         <div class="row"  style="padding-left:15px; padding-right:15px;">
                             <div style="display:flex; width:100%">
                                 <label class="formText" for="surnameInput" style="text-align: left; white-space: nowrap;">3. Фамилия</label>
-                                <input type="text" class="formTextBox" style="width:100%"  id="surname" name="surname" value="{{ old('surname') }}">
+                                <input type="text" class="formTextBox" style="width:100%" id="surname" name="surname" value="{{ old('surname') }}">
                             </div>
                         </div>
                         <div class="row"  style="padding-left:15px; padding-right:15px;">
@@ -970,7 +970,7 @@
                                     <td><input type="text" class="tableInput"></td>
                                 </tr>
                             </table>
-                            <div style="font-size: 12px; font-weight: 400; text-align: left; margin-top:20px">
+                            <div style="font-size: 13px; font-weight: 400; text-align: left; margin-top:20px">
                                 <p>* Заполняется в случае наличия:</p>
                                 <p>Суммы убытков КИК или ПУ КИК, возникающих в двух периодах, последовательно предшествующих отчетному периоду; суммы уменьшений в иностранной валюте; суммы уменьшений в иностранной валюте в соответствии с подпунктом 1) пункта 3 статьи 340 НК; суммы уменьшений в иностранной валюте в соответствии с подпунктом 2) пункта 3 статьи 340 НК; суммы уменьшений в иностранной валюте в соответствии с подпунктом 3) пункта 3 статьи 340 НК; суммы уменьшений в иностранной  валюте в соответствии с подпунктом                4) пункта 3 статьи 340 НК; суммы уменьшений в иностранной  валюте в соответствии с подпунктом 5) пункта 3 статьи 340 НК; суммы уменьшений в иностранной  валюте в соответствии с подпунктом 6) пункта 3 статьи 340 НК; суммы уменьшений в иностранной валюте в соответствии с подпунктом 7) пункта 3 статьи 340 НК; суммы уменьшений в иностранной  валюте в соответствии с подпунктом 8) пункта               3 статьи 340 НК; суммы уменьшений в иностранной валюте в соответствии с подпунктом 9) пункта 3 статьи  340 НК; суммы уменьшений в иностранной валюте в соответствии с подпунктом 10) пункта 3 статьи 340 Налогового кодекса; Финансовой прибыли, с учетом уменьшений и убытков КИК или ПУ КИК в иностранной валюте; финансовой прибыли, подлежащей налогообложению в иностранной валюте; Финансовой прибыли, подлежащей налогообложению в национальной валюте; суммы иностранного налога на прибыль по финансовой отчетности в иностранной валюте; суммы уплаченного иностранного налога на прибыль в иностранной валюте; суммы иностранного налога на прибыль, подлежащей отнесению в зачет, в национальной валюте; суммарная прибыль КИК и ПУ КИК; суммы облагаемого дохода КИК и ПУ КИК за исключением зарегистрированных в государствах с льготным налогообложением; суммы облагаемого дохода КИК и ПУ КИК, зарегистрированных в государствах с льготным налогообложением; Зачет иностранного налога с финансовой прибыли КИК или ПУ КИК.</p>
                             </div>
