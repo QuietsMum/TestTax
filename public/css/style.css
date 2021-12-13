@@ -1,9 +1,6 @@
 * {
     font-family: 'Roboto Condensed', sans-serif!important;
 }
-html{
-    font-size: 110%;
-}
 .bg-custom {
     background-color: #2C2567;
 }
@@ -86,7 +83,7 @@ html{
     margin-top:15px;
     color: #6F6F6F;
     background-color: #F6F6F9;
-    font-size: 0.9375rem!important;
+    font-size: 15px!important;
     font-weight: 700!important;
     height: 48px;
 }
@@ -95,7 +92,7 @@ html{
     width: 126px;
     color: #6F6F6F;
     background-color: #F6F6F9;
-    font-size: 0.9375rem!important;
+    font-size: 15px!important;
     font-weight: 700!important;
 }
 
@@ -104,7 +101,7 @@ html{
     box-shadow: 0px 1px 3px rgba(43, 42, 53, 0.12);
     border-radius: 4px;
     color: #fff;
-    font-size: 0.875rem!important;
+    font-size: 14px!important;
     font-weight: 700!important;
     position: absolute;
     left: 0;
@@ -157,7 +154,7 @@ html{
 .form-check-label {
     color: #4E4E4E;
     font-weight: 400!important;
-    font-size: 0.9375rem!important;
+    font-size: 15px!important;
 }
 .close .open {
     display: block;
@@ -187,14 +184,14 @@ html{
    margin-top: 10px;
 }
 .sectionTabLink {
-    font-size: 0.875rem!important;
+    font-size: 14px!important;
     font-weight: 400!important;
     text-decoration:none;
     color: #fff;
     opacity: 0.6;
 }
 .sectionTabLink:hover {
-    font-size: 0.875rem!important;
+    font-size: 14px!important;
     font-weight: 700!important;
     text-decoration:none;
     color: #fff;
@@ -202,14 +199,14 @@ html{
 }
 @media (min-width: 1600px){
     .sectionTabLink {
-        font-size: 0.875rem!important;
+        font-size: 14px!important;
         font-weight: 400!important;
         text-decoration:none;
         color: #fff;
         opacity: 0.6;
     }
     .sectionTabLink:hover {
-        font-size: 0.875rem!important;
+        font-size: 14px!important;
         font-weight: 700!important;
         text-decoration:none;
         color: #fff;
@@ -226,14 +223,14 @@ html{
     opacity: unset;
 }
 .homeBtn {
-    font-size: 1.25rem!important;
+    font-size: 20px!important;
     font-weight: 400!important;
     color: #BCBCBC;
     text-decoration:none;
     margin-top: 10px;
 }
 .homeBtn:hover {
-    font-size: 1.25rem!important;
+    font-size: 20px!important;
     font-weight: 400!important;
     color: #BCBCBC;
     text-decoration:none;
@@ -243,7 +240,7 @@ html{
     border-radius: 4px;
     color: #fff;
     font-weight: 700!important;
-    font-size: 1.125rem!important;
+    font-size: 18px!important;
     height: 62px;
     width:123px;
     display: inline-block;
@@ -253,7 +250,7 @@ html{
     border-radius: 4px;
     color: #fff;
     font-weight: 700!important;
-    font-size: 0.875rem!important;
+    font-size: 14px!important;
     width:200px;
     margin-top: 10px;
     float: right;
@@ -263,20 +260,20 @@ html{
     border-radius: 4px;
     color: #fff;
     font-weight: 700!important;
-    font-size: 0.9375rem!important;
+    font-size: 15px!important;
     padding: 8px 24px;
     width: 126px;
 }
 .whiteBox2 {
     background-color: #F9FAFF;
     padding: 30px;
-    font-size: 1rem!important;
+    font-size: 16px!important;
     font-weight: 400!important;
     box-shadow: 0px 12px 16px rgba(36, 77, 116, 0.03);
 }
 .goldHighlight {
     background: #E5D2B2;
-    font-size: 0.875rem!important;
+    font-size: 14px!important;
     font-style: italic;
 }
 .btnCustom4 {
@@ -288,7 +285,7 @@ html{
     height: 48px;
     float: right;
     font-weight: 700!important;
-    font-size: 1.125rem!important;
+    font-size: 18px!important;
     margin-left: 20px;
 }
 .whiteBox3 {
@@ -311,7 +308,7 @@ html{
     margin: auto;
     margin-top: 20px;
     text-align: center;
-    height: 60vh;
+    height: 40vh;
     overflow-y: scroll;
     font-family: 'Times New Roman', Times, serif!important;
 }
@@ -336,20 +333,20 @@ html{
         margin: auto;
         margin-top: 20px;
         text-align: center;
-        height: 60vh;
+        height: 53vh;
         overflow-y: scroll;
         font-family: 'Times New Roman', Times, serif!important;
     }
 }
 .formText {
     font-weight: 400!important;
-    font-size: 1.125rem!important;
+    font-size: 18px!important;
     color: #000;
     font-family: 'Times New Roman', Times, serif!important;
 }
 .formText2 {
     font-weight: 400!important;
-    font-size: 0.875rem!important;
+    font-size: 14px!important;
     color: #000;
     font-family: 'Times New Roman', Times, serif!important;
 }
@@ -377,7 +374,7 @@ html{
 th, td {
     border: 1px solid #000000;
     font-weight: 400!important;
-    font-size: 0.875rem!important;
+    font-size: 14px!important;
     font-family: 'Times New Roman', Times, serif!important;
 }
 .tableInput {
@@ -495,12 +492,12 @@ th, td {
 }
 ::placeholder {
     color: #5D6065!important;
-    font-size: 0.9375rem!important;
+    font-size: 15px!important;
     font-weight: 700!important
   }
 .formPlaceholderStyle {
     color: #5D6065!important;
-    font-size: 0.9375rem!important;
+    font-size: 15px!important;
     font-weight: 700!important;
 }
 .btnCustom8 {
@@ -509,7 +506,7 @@ th, td {
     border-radius: 4px;
     color: #2C2567;
     font-weight: 500;
-    font-size: 0.875rem;
+    font-size: 14px;
     margin-top: 40px;
     width: 180px;
     margin-bottom: 80px;
@@ -524,7 +521,7 @@ th, td {
     border-radius: 8px;
     padding: 24px;
     color:#2C2567;
-    font-size: 1.125rem;
+    font-size: 18px;
     font-weight: 700;
     width: 70%;
     margin: 0 auto;
@@ -532,7 +529,7 @@ th, td {
 }
 .timer {
     color:#F00000;
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 700;
 }
 #toTop {
@@ -541,7 +538,7 @@ th, td {
     bottom: 100px;
     right: 40px;
     z-index: 99;
-    font-size: 1.125rem;
+    font-size: 18px;
     border: none;
     outline: none;
     color: white;
@@ -556,7 +553,7 @@ th, td {
     bottom: 100px;
     right: 40px;
     z-index: 99;
-    font-size: 1.125rem;
+    font-size: 18px;
     border: none;
     outline: none;
     color: white;
