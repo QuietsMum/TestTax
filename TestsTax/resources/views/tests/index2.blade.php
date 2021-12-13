@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
 
-    <title>Главная</title>
+    <title>Тестирование</title>
 </head>
 <body style="height:100%;">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-custom">
