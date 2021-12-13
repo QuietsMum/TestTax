@@ -106,7 +106,7 @@ $traning
                     <p style="font-size:22px; font-weight:700; text-decoration: underline; color:#D2AB67; margin-top:6%">#ВМЕСТЕКРАЗВИТИЮ</p>
                 </div>
                 <div class="col-sm-8">
-                    <button type="button" class="btn btnCustom"><img src="img/supportIcon.svg" alt=""> Тех. поддержка</button>
+                    <a href="{{ route('admin') }}" class="btn btnCustom"><img src="img/supportIcon.svg" alt=""> Тех. поддержка</a>
                 </div>
             </div>
         </div>

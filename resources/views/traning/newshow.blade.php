@@ -982,7 +982,7 @@
                         </div>
                         <div class="col-sm-9">
                             <input type="submit" form="myform" class="btn btnCustom4" name="submit" value="Проверить"/>
-                            <button type="button" class="btn btnCustom"><img src="{{ asset('img/supportIcon.svg') }}" alt=""> Тех. поддержка</button>
+                            <a href="{{ route('admin') }}" class="btn btnCustom"><img src="{{ asset('img/supportIcon.svg') }}" alt=""> Тех. поддержка</a>
                         </div>
                     </div>
                 </div>

@@ -993,7 +993,7 @@
                         </div>
                         <div class="col-sm-4">
                             <button type="button" class="btn btnCustom4" style="background-color: #282781;"  onclick="showInfoPopupCheck()"> Завершить</button>
-                            <button type="button" class="btn btnCustom"><img src="{{ asset('img/supportIcon.svg') }}" alt=""> Тех. поддержка</button>
+                            <a href="{{ route('admin') }}" class="btn btnCustom"><img src="{{ asset('img/supportIcon.svg') }}" alt=""> Тех. поддержка</a>
                         </div>
                     </div>
                 </div>

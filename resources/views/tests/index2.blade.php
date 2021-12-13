@@ -39,7 +39,8 @@
     <div class="container-fluid h-100">
        <div class="row h-100">
            <div class="col-sm-5 leftBox">
-                <p style="font-size: 48px; font-weight: 700; color:#fff; margin-top: 90px;">Добро пожаловать на тестирование</p>
+                <p style="font-size: 29px; font-weight: 700; color:#fff; margin-top: 90px;">Добро пожаловать на тестирование по составлению декларации о доходах и имуществе
+                    физического лица</p>
                 <form style="margin-top: 50px;">
                     <div class="form-group">
                         <input type="text" class="form-control"  placeholder="Код">
@@ -90,7 +91,7 @@
                     <p style="font-size:22px; font-weight:700; text-decoration: underline; color:#D2AB67; margin-top:6%">#ВМЕСТЕКРАЗВИТИЮ</p>
                 </div>
                 <div class="col-sm-8">
-                    <button type="button" class="btn btnCustom"><img src="{{ asset('img/supportIcon.svg') }}" alt=""> Тех. поддержка</button>
+                    <a href="{{ route('admin') }}" class="btn btnCustom"><img src="{{ asset('img/supportIcon.svg') }}" alt=""> Тех. поддержка</a>
                 </div>
             </div>
         </div>
