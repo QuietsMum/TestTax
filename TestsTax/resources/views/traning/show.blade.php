@@ -24,51 +24,67 @@
             <div>
             <div class="sectionTab first" style="margin-top: 20px;">
                 <a class="sectionTabLink" href="#sectionA">Раздел А.</a>
+                <img id="imgA" src="" style="margin-left: 20px;" alt="">
             </div>
             <div class="sectionTab">
                 <a class="sectionTabLink" href="#sectionB">Раздел B.</a>
+                <img id="imgB" src="" style="margin-left: 20px;" alt="">
             </div>
             <div class="sectionTab">
                 <a class="sectionTabLink" href="#sectionC">Раздел C.</a>
+                <img id="imgC" src="" style="margin-left: 20px;" alt="">
             </div>
             <div class="sectionTab">
                 <a class="sectionTabLink" href="#sectionD">Раздел D.</a>
+                <img id="imgD" src="" style="margin-left: 20px;" alt="">
             </div>
             <div class="sectionTab">
                 <a class="sectionTabLink" href="#sectionE">Раздел E.</a>
+                <img id="imgE" src="" style="margin-left: 20px;" alt="">
             </div>
             <div class="sectionTab">
                 <a class="sectionTabLink" href="#sectionF">Раздел F.</a>
+                <img id="imgF" src="" style="margin-left: 20px;" alt="">
             </div>
             <div class="sectionTab">
                 <a class="sectionTabLink" href="#sectionG">Раздел G.</a>
+                <img id="imgG" src="" style="margin-left: 20px;" alt="">
             </div>
             <div class="sectionTab">
                 <a class="sectionTabLink" href="#sectionH">Раздел H.</a>
+                <img id="imgH" src="" style="margin-left: 20px;" alt="">
             </div>
             <div class="sectionTab">
                 <a class="sectionTabLink" href="#sectionI">Раздел I.</a>
+                <img id="imgI" src="" style="margin-left: 20px;" alt="">
             </div>
             <div class="sectionTab">
                 <a class="sectionTabLink" href="#sectionJ">Раздел J.</a>
+                <img id="imgJ" src="" style="margin-left: 20px;" alt="">
             </div>
             <div class="sectionTab">
                 <a class="sectionTabLink" href="#sectionK">Раздел K.</a>
+                <img id="imgK" src="" style="margin-left: 20px;" alt="">
             </div>
             <div class="sectionTab">
                 <a class="sectionTabLink" href="#sectionL">Раздел L.</a>
+                <img id="imgL" src="" style="margin-left: 20px;" alt="">
             </div>
             <div class="sectionTab">
                 <a class="sectionTabLink" href="#sectionM">Раздел M.</a>
+                <img id="imgM" src="" style="margin-left: 20px;" alt="">
             </div>
             <div class="sectionTab">
                 <a class="sectionTabLink" href="#sectionN">Раздел N.</a>
+                <img id="imgN" src="" style="margin-left: 20px;" alt="">
             </div>
             <div class="sectionTab">
                 <a class="sectionTabLink" href="#sectionO">Раздел O.</a>
+                <img id="imgO" src="" style="margin-left: 20px;" alt="">
             </div>
             <div class="sectionTab">
                 <a class="sectionTabLink" href="#sectionP">Раздел P.</a>
+                <img id="imgP" src="" style="margin-left: 20px;" alt="">
             </div>
             </div>
             <!-- <div style="position: fixed; bottom:3%"> -->
@@ -152,7 +168,7 @@
                             <p class="formText2">(несовершеннолетнего и (или) недееспособного или ограниченно дееспособного)</p>
                         </div>
                         <div class="row"  style="padding-left:15px; padding-right:15px;">
-                            <p class="formText">5. Вид декларации (укажите X в соответствующей ячейке)</p>
+                            <p class="formText">5. Вид декларации (укажите ✔ в соответствующей ячейке)</p>
                         </div>
                         <div class="row"  style="padding-left:15px; padding-right:15px;">
                             <div style="display:flex; width:100%">
@@ -1793,149 +1809,190 @@
             document.getElementById('blocks').innerHTML = blocks;
             for (let i=0; mistakes.length; i++) {
               document.getElementById(mistakes[i]).style = "background-color: #FFEAEA";
+
+              if(mistakes[i] == 'iin' || mistakes[i] == 'period' || mistakes[i] == 'surname' || mistakes[i] == 'name' || mistakes[i] == 'patronymic' || mistakes[i] == 'email' || mistakes[i] == 'phonename' || mistakes[i] == 'declarationtype' ){
+              document.getElementById("imgA").src = "{{ asset('img/errorDot.svg') }}";
+              }
+
               if(mistakes[i] == 'b_1'){
               document.getElementById("table_b_1").className = "error";
               document.getElementById("table_b_1_error").src = "{{ asset('img/errorIcon2.svg') }}";
+              document.getElementById("imgB").src = "{{ asset('img/errorDot.svg') }}";
               }if(mistakes[i] == 'b_2'){
               document.getElementById("table_b_2").className = "error";
               document.getElementById("table_b_2_error").src = "{{ asset('img/errorIcon2.svg') }}";
+              document.getElementById("imgB").src = "{{ asset('img/errorDot.svg') }}";
               }if(mistakes[i] == 'b_2a'){
               document.getElementById("table_b_2a").className = "error";
               document.getElementById("table_b_2a_error").src = "{{ asset('img/errorIcon2.svg') }}";
+              document.getElementById("imgB").src = "{{ asset('img/errorDot.svg') }}";
               }if(mistakes[i] == 'b_2b'){
               document.getElementById("table_b_2b").className = "error";
               document.getElementById("table_b_2b_error").src = "{{ asset('img/errorIcon2.svg') }}";
+              document.getElementById("imgB").src = "{{ asset('img/errorDot.svg') }}";
               }if(mistakes[i] == 'b_2c'){
               document.getElementById("table_b_2c").className = "error";
               document.getElementById("table_b_2c_error").src = "{{ asset('img/errorIcon2.svg') }}";
+              document.getElementById("imgB").src = "{{ asset('img/errorDot.svg') }}";
               }if(mistakes[i] == 'b_2d'){
               document.getElementById("table_b_2d").className = "error";
               document.getElementById("table_b_2d_error").src = "{{ asset('img/errorIcon2.svg') }}";
+              document.getElementById("imgB").src = "{{ asset('img/errorDot.svg') }}";
               }
 
               if(mistakes[i] == 'e_1'){
               document.getElementById("table_e_1").className = "error";
               document.getElementById("table_e_1_error").src = "{{ asset('img/errorIcon2.svg') }}";
+              document.getElementById("imgE").src = "{{ asset('img/errorDot.svg') }}";
               }if(mistakes[i] == 'e_1a'){
               document.getElementById("table_e_1a").className = "error";
               document.getElementById("table_e_1a_error").src = "{{ asset('img/errorIcon2.svg') }}";
+              document.getElementById("imgE").src = "{{ asset('img/errorDot.svg') }}";
               }if(mistakes[i] == 'e_1b'){
               document.getElementById("table_e_1b").className = "error";
               document.getElementById("table_e_1b_error").src = "{{ asset('img/errorIcon2.svg') }}";
+              document.getElementById("imgE").src = "{{ asset('img/errorDot.svg') }}";
               }if(mistakes[i] == 'e_1c'){
               document.getElementById("table_e_1c").className = "error";
               document.getElementById("table_e_1c_error").src = "{{ asset('img/errorIcon2.svg') }}";
+              document.getElementById("imgE").src = "{{ asset('img/errorDot.svg') }}";
               }if(mistakes[i] == 'e_1d'){
               document.getElementById("table_e_1d").className = "error";
               document.getElementById("table_e_1d_error").src = "{{ asset('img/errorIcon2.svg') }}";
+              document.getElementById("imgE").src = "{{ asset('img/errorDot.svg') }}";
               }if(mistakes[i] == 'e_2'){
               document.getElementById("table_e_2").className = "error";
               document.getElementById("table_e_2_error").src = "{{ asset('img/errorIcon2.svg') }}";
+              document.getElementById("imgE").src = "{{ asset('img/errorDot.svg') }}";
               }if(mistakes[i] == 'e_3'){
               document.getElementById("table_e_3").className = "error";
               document.getElementById("table_e_3_error").src = "{{ asset('img/errorIcon2.svg') }}";
+              document.getElementById("imgE").src = "{{ asset('img/errorDot.svg') }}";
               }if(mistakes[i] == 'e_4'){
               document.getElementById("table_e_4").className = "error";
               document.getElementById("table_e_4_error").src = "{{ asset('img/errorIcon2.svg') }}";
+              document.getElementById("imgE").src = "{{ asset('img/errorDot.svg') }}";
               }
 
               if(mistakes[i] == 'f_1a'){
               document.getElementById("table_f_1").className = "error";
               document.getElementById("table_f_1_error").src = "{{ asset('img/errorIcon2.svg') }}";
+              document.getElementById("imgF").src = "{{ asset('img/errorDot.svg') }}";
               }if(mistakes[i] == 'f_2a'){
               document.getElementById("table_f_2").className = "error";
               document.getElementById("table_f_2_error").src = "{{ asset('img/errorIcon2.svg') }}";
+              document.getElementById("imgF").src = "{{ asset('img/errorDot.svg') }}";
               }if(mistakes[i] == 'f_2f_1'){
               document.getElementById("table_f_2f_1").className = "error";
               document.getElementById("table_f_2g_1").className = "error";
               document.getElementById("table_f_2h_1").className = "error";
               document.getElementById("table_f_2f_1_img").style = "background-color: #FFEAEA";
               document.getElementById("table_f_2f_1_error").src = "{{ asset('img/errorIcon2.svg') }}";
+              document.getElementById("imgF").src = "{{ asset('img/errorDot.svg') }}";
               }if(mistakes[i] == 'f_2f_2'){
               document.getElementById("table_f_2f_2").className = "error";
               document.getElementById("table_f_2g_2").className = "error";
               document.getElementById("table_f_2h_2").className = "error";
               document.getElementById("table_f_2f_2_img").style = "background-color: #FFEAEA";
               document.getElementById("table_f_2f_2_error").src = "{{ asset('img/errorIcon2.svg') }}";
+              document.getElementById("imgF").src = "{{ asset('img/errorDot.svg') }}";
               }if(mistakes[i] == 'f_2f_3'){
               document.getElementById("table_f_2f_3").className = "error";
               document.getElementById("table_f_2g_3").className = "error";
               document.getElementById("table_f_2h_3").className = "error";
               document.getElementById("table_f_2f_3_img").style = "background-color: #FFEAEA";
               document.getElementById("table_f_2f_3_error").src = "{{ asset('img/errorIcon2.svg') }}";
+              document.getElementById("imgF").src = "{{ asset('img/errorDot.svg') }}";
               }
 
               if(mistakes[i] == 'g_1a'){
               document.getElementById("table_g_1").className = "error";
               document.getElementById("table_g_1_error").src = "{{ asset('img/errorIcon2.svg') }}";
+              document.getElementById("imgG").src = "{{ asset('img/errorDot.svg') }}";
               }
 
               if(mistakes[i] == 'h_1a'){
               document.getElementById("table_h_1").className = "error";
               document.getElementById("table_h_1_error").src = "{{ asset('img/errorIcon2.svg') }}";
+              document.getElementById("imgH").src = "{{ asset('img/errorDot.svg') }}";
               }
 
               if(mistakes[i] == 'i_1a'){
               document.getElementById("table_i_1").className = "error";
               document.getElementById("table_i_1_error").src = "{{ asset('img/errorIcon2.svg') }}";
+              document.getElementById("imgI").src = "{{ asset('img/errorDot.svg') }}";
               } if(mistakes[i] == 'i_2a'){
               document.getElementById("table_i_2").className = "error";
               document.getElementById("table_i_2_error").src = "{{ asset('img/errorIcon2.svg') }}";
+              document.getElementById("imgI").src = "{{ asset('img/errorDot.svg') }}";
               }
 
               if(mistakes[i] == 'j_1a'){
               document.getElementById("table_j_1").className = "error";
               document.getElementById("table_j_1_error").src = "{{ asset('img/errorIcon2.svg') }}";
+              document.getElementById("imgJ").src = "{{ asset('img/errorDot.svg') }}";
               }
 
               if(mistakes[i] == 'n_b1'){
               document.getElementById("table_n_1_name").className = "error";
               document.getElementById("table_n_b1").className = "error";
               document.getElementById("table_n_c1").className = "error";
+              document.getElementById("imgN").src = "{{ asset('img/errorDot.svg') }}";
               }if(mistakes[i] == 'n_b2'){
               document.getElementById("table_n_2_name").className = "error";
               document.getElementById("table_n_b2").className = "error";
               document.getElementById("table_n_c2").className = "error";
+              document.getElementById("imgN").src = "{{ asset('img/errorDot.svg') }}";
               }if(mistakes[i] == 'n_b3'){
               document.getElementById("table_n_3_name").className = "error";
               document.getElementById("table_n_b3").className = "error";
               document.getElementById("table_n_c3").className = "error";
+              document.getElementById("imgN").src = "{{ asset('img/errorDot.svg') }}";
               }if(mistakes[i] == 'n_b4'){
               document.getElementById("table_n_4_name").className = "error";
               document.getElementById("table_n_b4").className = "error";
               document.getElementById("table_n_c4").className = "error";
+              document.getElementById("imgN").src = "{{ asset('img/errorDot.svg') }}";
               }if(mistakes[i] == 'n_b5'){
               document.getElementById("table_n_5_name").className = "error";
               document.getElementById("table_n_b5").className = "error";
               document.getElementById("table_n_c5").className = "error";
+              document.getElementById("imgN").src = "{{ asset('img/errorDot.svg') }}";
               }if(mistakes[i] == 'n_b6'){
               document.getElementById("table_n_6_name").className = "error";
               document.getElementById("table_n_b6").className = "error";
               document.getElementById("table_n_c6").className = "error";
+              document.getElementById("imgN").src = "{{ asset('img/errorDot.svg') }}";
               }if(mistakes[i] == 'n_b7'){
               document.getElementById("table_n_7_name").className = "error";
               document.getElementById("table_n_b7").className = "error";
               document.getElementById("table_n_c7").className = "error";
+              document.getElementById("imgN").src = "{{ asset('img/errorDot.svg') }}";
               }if(mistakes[i] == 'n_b8'){
               document.getElementById("table_n_8_name").className = "error";
               document.getElementById("table_n_b8").className = "error";
               document.getElementById("table_n_c8").className = "error";
+              document.getElementById("imgN").src = "{{ asset('img/errorDot.svg') }}";
               }if(mistakes[i] == 'n_b9'){
               document.getElementById("table_n_9_name").className = "error";
               document.getElementById("table_n_b9").className = "error";
               document.getElementById("table_n_c9").className = "error";
+              document.getElementById("imgN").src = "{{ asset('img/errorDot.svg') }}";
               }if(mistakes[i] == 'n_b10'){
               document.getElementById("table_n_10_name").className = "error";
               document.getElementById("table_n_b10").className = "error";
               document.getElementById("table_n_c10").className = "error";
+              document.getElementById("imgN").src = "{{ asset('img/errorDot.svg') }}";
               }if(mistakes[i] == 'n_b11'){
               document.getElementById("table_n_11_name").className = "error";
               document.getElementById("table_n_b11").className = "error";
               document.getElementById("table_n_c11").className = "error";
+              document.getElementById("imgN").src = "{{ asset('img/errorDot.svg') }}";
               }if(mistakes[i] == 'n_b12'){
               document.getElementById("table_n_12_name").className = "error";
               document.getElementById("table_n_b12").className = "error";
               document.getElementById("table_n_c12").className = "error";
+              document.getElementById("imgN").src = "{{ asset('img/errorDot.svg') }}";
               }
 
             }
