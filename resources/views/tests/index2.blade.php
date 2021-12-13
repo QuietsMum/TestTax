@@ -12,20 +12,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
 
-    <title>Тестирование</title>
+    <title>Главная</title>
 </head>
 <body style="height:100%;">
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-custom">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-custom3">
         <div class="container-fluid">
             <div class="row" style="width:100%">
                 <div class="col-sm-2">
                 <img class="navbar-brand" src="{{ asset('img/logo.svg') }}" style="width:60%" alt="">
                 </div>
                 <div class="col-sm-8" style="text-align:center; margin-top:1%">
-                <p style="font-size:22px; font-weight:400; color:#fff">Тестирование по составлению декларации о доходах и имуществе физического лица (ФНО 270.00)</p>
+                <p style="font-size:24px; font-weight:700; color:#fff; white-space: nowrap;">Тестирование по составлению декларации о доходах и имуществе физического лица (ФНО 270.00)</p>
                 </div>
                 <div class="col-sm-2" style="text-align:right; margin-top:1%; font-size:18px; font-weight:400">
-                    <a class="dropdown-toggle"href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="dropdown-toggle dropdown-color" style="font-size: 18px;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Русский
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -39,7 +39,8 @@
     <div class="container-fluid h-100">
        <div class="row h-100">
            <div class="col-sm-5 leftBox">
-                <p style="font-size: 48px; font-weight: 700; color:#fff; margin-top: 90px;">Добро пожаловать на тестирование</p>
+                <p style="font-size: 29px; font-weight: 700; color:#fff; margin-top: 90px;">Добро пожаловать на тестирование по составлению декларации о доходах и имуществе
+                    физического лица</p>
                 <form style="margin-top: 50px;">
                     <div class="form-group">
                         <input type="text" class="form-control"  placeholder="Код">
@@ -62,7 +63,7 @@
            </div>
            <div class="col-sm-7 rightBox">
                 <div style="text-align: center;">
-                    <p style="font-size: 41px; font-weight: 700; color:#282781; margin-top: 90px;">Ознакомьтесь с правилами </br>и рекомендациями</p>
+                    <p style="font-size: 36px; font-weight: 700; color:#2C2567; margin-top: 90px;">Ознакомьтесь с правилами </br>и рекомендациями</p>
                 </div>
                 <div class="whiteBox4">
                     <ul>
@@ -74,7 +75,7 @@
                         <li>рекомендуем пройти пробное тестирование на нашем тренажере</li>
                     </ul>
                 </div>
-                <p style="font-size: 24px; font-weight: 700; color:#282781; text-align: center; margin-top: 50px; margin-bottom: 80px;">Удачного тестирования!</p>
+                <p style="font-size: 24px; font-weight: 700; color:#2C2567; text-align: center; margin-top: 50px; margin-bottom: 80px;">Удачного тестирования!</p>
 
            </div>
        </div>

@@ -91,7 +91,7 @@
                                     </div>
                                 </div>
                                 <div class="col-sm" style="padding-left: unset;">
-                                    <button type="button" class="btn btnCustom3" id="showCaseBtn">Свернуть <img id="showCaseIcon" src="{{ asset('img/dropdownIconUpWhite.svg') }}" alt="" style="float:right; margin-top:10px"></button>
+                                    <button type="button" class="btn btnCustom3" id="showCaseBtn">Открыть <img id="showCaseIcon" src="{{ asset('img/dropdownIconWhite.svg') }}" alt="" style="float:right; margin-top:10px"></button> 
                                     <p id="time" class="timer" style="display: inline-block; margin-left: 30px;">20:00</p>
                                 </div>
                             </div>
@@ -100,7 +100,7 @@
                 </div>
             </nav>
             <div >
-                <div class="whiteBox2 open" id="showCaseBlock">
+                <div class="whiteBox2 close" id="showCaseBlock">
                     <p id="caseDisc">Государственный служащий («М», ИИН 731201400135), в 2021 году:</p>
                 </div>
                 <div class="whiteBox3" id="formBox" style="  font-family: 'Times New Roman', Times, serif!important;">
@@ -110,7 +110,7 @@
                         <p class="formText">ДЕКЛАРАЦИЯ О ДОХОДАХ И ИМУЩЕСТВЕ</br>ФИЗИЧЕСКОГО ЛИЦА</p>
                         <!-- <p class="formText2 sideText">Форма 270.00 стр. 01</p> -->
                         <!-- РАЗДЕЛ A -->
-                        <p id="sectionA" class="formText">Раздел A. Общая информация о налогоплательщике </p>
+                        <p id="sectionA" class="formText">Раздел A. Общая информация о налогоплательщике <span><img class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt="" onclick="showInfoPopupA()"></span></p>
                         <div class="row" >
                             <div class="col-sm-6" style="text-align: left;">
                                 <label class="formText" for="iinInput">1. ИИН</label>
@@ -118,13 +118,13 @@
                             </div>
                             <div class="col-sm-6" style="text-align: left;">
                                 <label class="formText" for="taxYearInput">2. Налоговый период:</label>
-                                <input type="number" class="formTextBox" style="width:10%" id="period" name="period" value="{{ old('period') }}"><span class="formText">год</span>
+                                <input type="number" class="formTextBox" style="width:5%" id="period" name="period" value="{{ old('period') }}"><span class="formText">год</span>
                             </div>
                         </div>
                         <div class="row"  style="padding-left:15px; padding-right:15px;">
                             <div style="display:flex; width:100%">
                                 <label class="formText" for="surnameInput" style="text-align: left; white-space: nowrap;">3. Фамилия</label>
-                                <input type="text" class="formTextBox" style="width:100%"  id="surname" name="surname" value="{{ old('surname') }}">
+                                <input type="text" class="formTextBox" style="width:100%" id="surname" name="surname" value="{{ old('surname') }}">
                             </div>
                         </div>
                         <div class="row"  style="padding-left:15px; padding-right:15px;">
@@ -170,60 +170,66 @@
                             </div>
                         </div>
                          <!-- РАЗДЕЛ B -->
-                         <p id="sectionB" class="formText newSection">Раздел В. Сведения о доходах </p>
+                         <p id="sectionB" class="formText newSection">Раздел В. Сведения о доходах <span><img onclick="showInfoPopupB()" class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt=""></span></p>
                          <table class="tableCustom">
                              <th>(A) №</th>
                              <th>(B) Виды дохода</th>
                              <th>(C) Сумма</th>
                              <th class="iconCol"></th>
-
+                 
                              <tr>
                                  <td>01</td>
                                  <td style="text-align: left;">Доход, подлежащий налогообложению у источника выплаты</td>
                                  <td><input type="number" class="tableInput" id="b_1" name="b_1" value="{{ old('b_1') }}"></td>
+                                 <td class="iconCol"><span><img onclick="showInfoPopupB1()" class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt=""></span></td>
                              </tr>
                              <tr>
                                  <td>02</td>
                                  <td style="text-align: left;">Доход, подлежащий налогообложению физическим лицом самостоятельно, в том числе:</td>
                                  <td><input type="number" class="tableInput" id="b_2" name="b_2" value="{{ old('b_2') }}"></td>
+                                 <td class="iconCol"><span><img onclick="showInfoPopupB2()" class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt=""></span></td>
                              </tr>
                              <tr>
                                  <td>02A</td>
                                  <td style="text-align: left;">Имущественный доход</td>
                                  <td><input type="number" class="tableInput" id="b_2a" name="b_2a" value="{{ old('b_2a') }}"></td>
+                                 <td class="iconCol"><span><img onclick="showInfoPopupB2A()" class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt=""></span></td>
                              </tr>
                              <tr>
                                  <td>02B</td>
                                  <td style="text-align: left;">Доход лица, занимающегося частной практикой (сумма строк графы В раздела N)</td>
                                  <td><input type="number" class="tableInput" id="b_2b" name="b_2b" value="{{ old('b_2b') }}"></td>
+                                 <td class="iconCol"><span><img onclick="showInfoPopupB2B()" class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt=""></span></td>
                              </tr>
                              <tr>
                                  <td>02C</td>
                                  <td style="text-align: left;">Доход из источников за пределами Республики Казахстан</td>
                                  <td><input type="number" class="tableInput" id="b_2c" name="b_2c" value="{{ old('b_2c') }}"></td>
+                                 <td class="iconCol"><span><img onclick="showInfoPopupB2C()" class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt=""></span></td>
                              </tr>
                              <tr>
                                  <td>02D</td>
                                  <td style="text-align: left;">Доход индивидуального предпринимателя</td>
                                  <td><input type="number" class="tableInput" id="b_2d" name="b_2d" value="{{ old('b_2d') }}"></td>
+                                 <td class="iconCol"><span><img onclick="showInfoPopupB2D()" class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt=""></span></td>
                              </tr>
                          </table>
                         <!-- РАЗДЕЛ C -->
                         <div id="sectionC" class="row newSection" style="padding-left:15px; padding-right:15px;">
                             <div style="display:flex; width:100%; justify-content: center;">
-                                <label class="formText" for="sectionCInput" style="white-space: nowrap;">Раздел C. Общая сумма корректировки дохода в соответствии со статьей 341 НК </label>
+                                <label class="formText" for="sectionCInput" style="white-space: nowrap;">Раздел C. Общая сумма корректировки дохода в соответствии со статьей 341 НК <span><img onclick="showInfoPopupC()" class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt=""></span></label>
                                 <input type="text" class="formTextBox" style="width:10%" id="sectionCInput">
                             </div>
                         </div>
                         <!-- РАЗДЕЛ D -->
                         <div id="sectionD" class="row newSection" style="padding-left:15px; padding-right:15px;">
                         <div style="display:flex; width:100%; justify-content: center;">
-                            <label class="formText" for="sectionDInput" style="white-space: nowrap;">Раздел D. Сумма налоговых вычетов, не примененных налоговым агентом </label>
+                            <label class="formText" for="sectionDInput" style="white-space: nowrap;">Раздел D. Сумма налоговых вычетов, не примененных налоговым агентом <span><img onclick="showInfoPopupD()" class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt=""></span></label>
                             <input type="text" class="formTextBox" style="width:10%" id="sectionDInput">
                         </div>
                         </div>
                             <!-- РАЗДЕЛ E -->
-                            <p id="sectionE" class="formText newSection">Раздел E. Исчисление индивидуального подоходного налога (ИПН) </p>
+                            <p id="sectionE" class="formText newSection">Раздел E. Исчисление индивидуального подоходного налога (ИПН) <span><img onclick="showInfoPopupE()" class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt=""></span></p>
                             <table class="tableCustom">
                                 <th style=" white-space: nowrap;">(A) №</th>
                                 <th>(B) Наименование</th>
@@ -234,41 +240,49 @@
                                     <td>01</td>
                                     <td style="text-align: left;">Сумма исчисленного ИПН по доходам, подлежащим налогообложению самостоятельно (за исключением доходов от деятельности индивидуального предпринимателя), в том числе:</td>
                                     <td><input type="number" class="tableInput" id="e_1" name="e_1" value="{{ old('e_1') }}"></td>
+                                    <td class="iconCol"><span><img onclick="showInfoPopupE1()" class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt=""></span></td>
                                 </tr>
                                 <tr>
                                     <td>01A</td>
                                     <td style="text-align: left;">Сумма ИПН с дохода лица, занимающегося частной практикой (сумма строк графы С раздела N)</td>
                                     <td><input type="number" class="tableInput" id="e_1a" name="e_1a" value="{{ old('e_1a') }}"></td>
+                                    <td class="iconCol"><span><img onclick="showInfoPopupE1A()" class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt=""></span></td>
                                 </tr>
                                 <tr>
                                     <td>01B</td>
                                     <td style="text-align: left;">Сумма исчисленного ИПН с суммарной прибыли КИК и ПУ КИК, за исключением зарегистрированных в государствах с льготным налогообложением</td>
                                     <td><input type="number" class="tableInput" id="e_1b" name="e_1b" value="{{ old('e_1b') }}"></td>
+                                    <td class="iconCol"><span><img onclick="showInfoPopupE1B()" class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt=""></span></td>
                                 </tr>
                                 <tr>
                                     <td>01C</td>
                                     <td style="text-align: left;">Сумма исчисленного ИПН с суммарной прибыли КИК и ПУ КИК, зарегистрированных в государстве с льготным налогообложением</td>
                                     <td><input type="number" class="tableInput" id="e_1c" name="e_1c" value="{{ old('e_1c') }}"></td>
+                                    <td class="iconCol"><span><img onclick="showInfoPopupE1C()" class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt=""></span></td>
                                 </tr>
                                 <tr>
                                     <td>01D</td>
                                     <td style="text-align: left;">Сумма ИПН с доходов из источников за пределами Республики Казахстан</td>
                                     <td><input type="number" class="tableInput" id="e_1d" name="e_1d" value="{{ old('e_1d') }}"></td>
+                                    <td class="iconCol"><span><img onclick="showInfoPopupE1D()" class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt=""></span></td>
                                 </tr>
                                 <tr>
                                     <td>02</td>
                                     <td style="text-align: left;">Зачет иностранного налога с доходов из источников за пределами Республики Казахстан</td>
                                     <td><input type="number" class="tableInput" id="e_2" name="e_2" value="{{ old('e_2') }}"></td>
+                                    <td class="iconCol"><span><img onclick="showInfoPopupE2()" class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt=""></span></td>
                                 </tr>
                                 <tr>
                                     <td>03</td>
                                     <td style="text-align: left;">Зачет предварительных платежей по ИПН</td>
                                     <td><input type="number" class="tableInput" id="e_3" name="e_3" value="{{ old('e_3') }}"></td>
+                                    <td class="iconCol"><span><img onclick="showInfoPopupE3()" class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt=""></span></td>
                                 </tr>
                                 <tr>
                                     <td>04</td>
                                     <td style="text-align: left;">Итого ИПН, подлежащего уплате (строка 01 - строка 01А - строка 01В - строка 01С - строка 02 - строка 03)</td>
                                     <td><input type="number" class="tableInput" id="e_4" name="e_4" value="{{ old('e_4') }}"></td>
+                                    <td class="iconCol"><span><img onclick="showInfoPopupE4()" class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt=""></span></td>
                                 </tr>
                                 <tr>
                                     <td>05</td>
@@ -277,7 +291,7 @@
                                 </tr>
                             </table>
                          <!-- РАЗДЕЛ F -->
-                         <p id="sectionF" class="formText newSection">Раздел F. Сведения о приобретении (получении) имущества и об источниках покрытия расходов на приобретение имущества </p>
+                         <p id="sectionF" class="formText newSection">Раздел F. Сведения о приобретении (получении) имущества и об источниках покрытия расходов на приобретение имущества <span><img  onclick="showInfoPopupF()" class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt=""></span></p>
                          <table class="tableCustom">
                              <th colspan="4">(01) Сведения о приобретении (получении) имущества</th>
                              <th></th>
@@ -396,7 +410,7 @@
                              </tr>
                          </table>
                           <!-- РАЗДЕЛ G -->
-                          <p id="sectionG" class="formText newSection">Раздел G. Сведения об отчуждении имущества </p>
+                          <p id="sectionG" class="formText newSection">Раздел G. Сведения об отчуждении имущества <span><img onclick="showInfoPopupG()" class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt=""></span></p>
                           <table class="tableCustom">
                             <th>(A) №</th>
                             <th>(B) Вид имущества</th>
@@ -498,7 +512,7 @@
                             </tr>
                         </table>
                           <!-- РАЗДЕЛ H -->
-                          <p id="sectionH" class="formText newSection">Раздел H. Сведения о деньгах на банковских счетах в иностранных банках, находящихся за пределами Республики Казахстан, в сумме, в совокупности превышающей 1000-кратный размер МРП, установленного законом о республиканском бюджете и действующего на 31 декабря отчетного налогового периода </p>
+                          <p id="sectionH" class="formText newSection">Раздел H. Сведения о деньгах на банковских счетах в иностранных банках, находящихся за пределами Республики Казахстан, в сумме, в совокупности превышающей 1000-кратный размер МРП, установленного законом о республиканском бюджете и действующего на 31 декабря отчетного налогового периода <span><img onclick="showInfoPopupH()" class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt=""></span></p>
                           <table class="tableCustom">
                             <th>(A) №</th>
                             <th>(B) Идентификационный номер банковского учреждения</th>
@@ -591,7 +605,7 @@
                          <!-- РАЗДЕЛ I -->
                          <p id="sectionI" class="formText newSection">Раздел I. Сведения о наличии дебиторской/кредиторской задолженности,
                             в том числе за пределами Республики Казахстан
-                            на 31 декабря отчетного налогового периода
+                            на 31 декабря отчетного налогового периода <span><img onclick="showInfoPopupI()" class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt=""></span>
                             </p>
                          <table class="tableCustom">
                            <th>(A) №</th>
@@ -658,7 +672,7 @@
                         </tr>
                         </table>
                         <!-- РАЗДЕЛ J -->
-                        <p id="sectionJ" class="formText newSection">Раздел J. Сведения о наличии имущества и активов за пределами Республики Казахстан на 31 декабря отчетного налогового периода </p>
+                        <p id="sectionJ" class="formText newSection">Раздел J. Сведения о наличии имущества и активов за пределами Республики Казахстан на 31 декабря отчетного налогового периода <span><img onclick="showInfoPopupJ()"class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt=""></span></p>
                          <table class="tableCustom">
 
                             <th>(A) №</th>
@@ -706,7 +720,7 @@
                         <!-- РАЗДЕЛ K -->
                         <div class="row newSection" style="padding-left:15px; padding-right:15px;">
                         <div style="display:flex; width:100%; justify-content: center;">
-                            <label id="sectionK" class="formText" for="sectionDInput" style="white-space: nowrap;">Раздел K. Требование о зачете превышения по ИПН в сумме: </label>
+                            <label id="sectionK" class="formText" for="sectionDInput" style="white-space: nowrap;">Раздел K. Требование о зачете превышения по ИПН в сумме: <span><img onclick="showInfoPopupK()" class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt=""></span></label>
                             <input type="text" class="formTextBox" style="width:30%" id="sectionDInput">
                         </div>
                         </div>
@@ -744,7 +758,7 @@
                             </tr>
                         </table>
                         <!-- РАЗДЕЛ L -->
-                        <p id="sectionL" class="formText newSection">Раздел L. Требование о возврате превышения по ИПН, если «Да» заполните таблицу </p>
+                        <p id="sectionL" class="formText newSection">Раздел L. Требование о возврате превышения по ИПН, если «Да» заполните таблицу <span><img onclick="showInfoPopupL()" class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt=""></span></p>
                             <table class="tableCustom">
                                 <th>№</th>
                                 <th colspan="3">Сумму ИПН, после погашения имеющейся налоговой задолженности, а также  внесения в счет предстоящих платежей прошу вернуть на банковский счет</th>
@@ -759,14 +773,14 @@
                                 </tr>
                             </table>
                         <!-- РАЗДЕЛ M -->
-                        <p id="sectionM" class="formText newSection">Раздел M. Согласие налогоплательщика на раскрытие сведений (укажите Х в соответствующей ячейке): </p>
+                        <p id="sectionM" class="formText newSection">Раздел M. Согласие налогоплательщика на раскрытие сведений (укажите Х в соответствующей ячейке): <span><img onclick="showInfoPopupM()" class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt=""></span></p>
                             <table class="tableCustom">
                                 <th>Настоящим я даю согласие на представление банковскими учреждениями сведений о расходах физического лица на погашение вознаграждения по ипотечным жилищным займам, полученным на приобретение жилья в Республике Казахстан</th>
                                 <th><input type="text" class="tableInput"></th>
                             </table>
                         <!-- РАЗДЕЛ N -->
                         <p id="sectionN" class="formText newSection">Раздел N. Для заполнения частными нотариусом, судебным исполнителем
-                            адвокатом, профессиональным медиатором
+                            адвокатом, профессиональным медиатором <span><img onclick="showInfoPopupN()" class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt=""></span>
                             </p>
                             <table class="tableCustom">
                                 <th>(А) Период (месяц)</th>
@@ -826,7 +840,7 @@
                                 </tr>
                             </table>
                         <!-- РАЗДЕЛ O -->
-                            <p id="sectionO" class="formText newSection">Раздел O. Финансовая прибыль контролируемой иностранной компании (КИК) </p>
+                            <p id="sectionO" class="formText newSection">Раздел O. Финансовая прибыль контролируемой иностранной компании (КИК) <span><img onclick="showInfoPopupO()" class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt=""></span></p>
                             <table class="tableCustom">
                                 <th>(А) №</th>
                                 <th>(В) Наименование   КИК или ПУ КИК</th>
@@ -918,7 +932,7 @@
                                     <td><input type="text" class="tableInput"></td>
                                 </tr>
                             </table>
-                            <div style="font-size: 12px; font-weight: 400; text-align: left; margin-top:20px">
+                            <div style="font-size: 13px; font-weight: 400; text-align: left; margin-top:20px">
                                 <p>* Заполняется в случае наличия:</p>
                                 <p>Суммы убытков КИК или ПУ КИК, возникающих в двух периодах, последовательно предшествующих отчетному периоду; суммы уменьшений в иностранной валюте; суммы уменьшений в иностранной валюте в соответствии с подпунктом 1) пункта 3 статьи 340 НК; суммы уменьшений в иностранной валюте в соответствии с подпунктом 2) пункта 3 статьи 340 НК; суммы уменьшений в иностранной валюте в соответствии с подпунктом 3) пункта 3 статьи 340 НК; суммы уменьшений в иностранной  валюте в соответствии с подпунктом                4) пункта 3 статьи 340 НК; суммы уменьшений в иностранной  валюте в соответствии с подпунктом 5) пункта 3 статьи 340 НК; суммы уменьшений в иностранной  валюте в соответствии с подпунктом 6) пункта 3 статьи 340 НК; суммы уменьшений в иностранной валюте в соответствии с подпунктом 7) пункта 3 статьи 340 НК; суммы уменьшений в иностранной  валюте в соответствии с подпунктом 8) пункта               3 статьи 340 НК; суммы уменьшений в иностранной валюте в соответствии с подпунктом 9) пункта 3 статьи  340 НК; суммы уменьшений в иностранной валюте в соответствии с подпунктом 10) пункта 3 статьи 340 Налогового кодекса; Финансовой прибыли, с учетом уменьшений и убытков КИК или ПУ КИК в иностранной валюте; финансовой прибыли, подлежащей налогообложению в иностранной валюте; Финансовой прибыли, подлежащей налогообложению в национальной валюте; суммы иностранного налога на прибыль по финансовой отчетности в иностранной валюте; суммы уплаченного иностранного налога на прибыль в иностранной валюте; суммы иностранного налога на прибыль, подлежащей отнесению в зачет, в национальной валюте; суммарная прибыль КИК и ПУ КИК; суммы облагаемого дохода КИК и ПУ КИК за исключением зарегистрированных в государствах с льготным налогообложением; суммы облагаемого дохода КИК и ПУ КИК, зарегистрированных в государствах с льготным налогообложением; Зачет иностранного налога с финансовой прибыли КИК или ПУ КИК.</p>
                             </div>
@@ -1111,7 +1125,7 @@
             <div class="popupInfo" id="infoB2D" style="display: none;">
                 <img src="{{ asset('img/closeIcon.svg') }}" class="closeIcon" alt="" onclick="closeInfoPopupB2D()">
                 <div class="infoText">
-                <p style="font-weight:700; font-size: 16px;"">Строка 02D. Доход индивидуального предпринимателя (статья 338 Налогового кодекса)</p>
+                <p style="font-weight:700; font-size: 16px;">Строка 02D. Доход индивидуального предпринимателя (статья 338 Налогового кодекса)</p>
                 </div>
                 <button type="button" class="btn btnCustom5" onclick="location.href='{{ route('info') }}#sectionB2D';">Читать полностью</button>
             </div>
@@ -1719,8 +1733,10 @@
       popupMask.style.display = "none";
     }
     function showPopupComplete() {
+        var checkPopup = document.getElementById("popupCheck");
         var popupComplete = document.getElementById("popupComplete");
         var popupMask = document.getElementById("popupMask");
+        checkPopup.style.display = "none";
         popupMask.style.display = "block";
         popupComplete.style.display = "block";
     }
