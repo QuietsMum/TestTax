@@ -24,7 +24,7 @@
                     </p>
                 </div>
                 <div class="col-sm-4" style="text-align:right; font-size:18px; font-weight:400">
-                    <button type="button" class="btn btnCustom" style="margin-top: 5px;" onclick="history.back()">Назад к тренажеру <img src="{{ asset('/img/arrowIcon.svg') }}" style="margin-left: 5px;" alt=""></button>
+                    <button type="button" class="btn btnCustom" style="margin-top: 5px;" onclick="history.back()">Назад<img src="{{ asset('/img/arrowIcon.svg') }}" style="margin-left: 5px;" alt=""></button>
                 </div>
             </div>
         </div>

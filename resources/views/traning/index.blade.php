@@ -1,5 +1,3 @@
-$traning
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -21,17 +19,17 @@ $traning
         <div class="container-fluid">
             <div class="row" style="width:100%">
                 <div class="col-sm-2">
-                <img class="navbar-brand" src="img/logo.svg" style="width:60%" alt="">
+                    <img class="navbar-brand" src="img/logo.svg" style="width:60%" alt="">
                 </div>
                 <div class="col-sm-8" style="text-align:center; margin-top:1%">
-                <p style="font-size:22px; font-weight:400; color:#fff">Тренажер по составлению декларации о доходах и имуществе физического лица (ФНО 270.00)</p>
+                    <p style="font-size:24px; font-weight:700; color:#fff; white-space: nowrap;">Тренажер по составлению декларации о доходах и имуществе физического лица (ФНО 270.00)</p>
                 </div>
                 <div class="col-sm-2" style="text-align:right; margin-top:1%; font-size:18px; font-weight:400">
-                    <a class="dropdown-toggle"href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="dropdown-toggle dropdown-color" style="font-size: 18px;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Русский
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#" style="font-size:18px; font-weight:400">Казахский</a>
+                        <a class="dropdown-item" href="#" style="font-size:18px; font-weight:400">Казахский</a>
                     </div>
                 </div>
             </div>
@@ -39,10 +37,10 @@ $traning
     </nav>
     <div class="mainBg" style="height: 1000px;">
         <div class="whiteBox">
-            <h1 style="color:#160B50; font-size:24px; font-weight:700;">Добро пожаловать!</h1>
+            <h1 style="color:#2C2567; font-size:24px; font-weight:700;">Добро пожаловать!</h1>
             <div class="goldBorder">
-                <p style="color:#282781; font-size:15px; font-weight:700; margin-bottom: 0rem;">Выберите один кейс, по которому пройдет тренинг.</p>
-                <p style="color:#282781; font-size:15px; font-weight:700; margin-bottom: 0rem;">Используйте подсказки при заполнении полей. После заполнения у вас будет возможность проверить свои результаты.</p>
+                <p style="color:#2C2567; font-size:15px; font-weight:700; margin-bottom: 0rem;">Выберите один кейс, по которому пройдет тренинг.</p>
+                <p style="color:#2C2567; font-size:15px; font-weight:700; margin-bottom: 0rem;">Используйте подсказки при заполнении полей. После заполнения у вас будет возможность проверить свои результаты.</p>
             </div>
             <div class="selectCase" id="selectCaseBtn">
                 <p id="selectCaseText" style="color:#939DA8; font-size:15px; font-weight:700; margin-bottom: 0rem; text-align:left">Выберите один кейс <img id="selectCaseIcon" src="img/dropdownIcon.svg" alt="" style="float:right; margin-top:10px"></p>
@@ -52,42 +50,42 @@ $traning
                     <div class="row">
                         <div class="col-sm">
                             <div class="form-check">
-                            <input class="form-check-input" type="radio" name="cases" value="1" id="case1">
-                            <label class="form-check-label" for="case1">
-                                Кейс 1
-                            </label>
+                                <input class="form-check-input" type="radio" name="cases" value="1" id="case1">
+                                <label class="form-check-label" for="case1">
+                                    Кейс 1
+                                </label>
                             </div>
                             <div class="form-check" style="margin-top:12px">
-                            <input class="form-check-input"  type="radio" name="cases" value="2" id="case2">
-                            <label class="form-check-label" for="case2">
-                                Кейс 2
-                            </label>
+                                <input class="form-check-input"  type="radio" name="cases" value="2" id="case2">
+                                <label class="form-check-label" for="case2">
+                                    Кейс 2
+                                </label>
                             </div>
                             <div class="form-check" style="margin-top:12px">
-                            <input class="form-check-input"  type="radio" name="cases" value="3" id="case3">
-                            <label class="form-check-label" for="case3">
-                                Кейс 3
-                            </label>
-                            </div>
-                            <div class="form-check" style="margin-top:12px">
-                            <input class="form-check-input"  type="radio" name="cases" value="4" id="case4">
-                            <label class="form-check-label" for="case4">
-                                Кейс 4
-                            </label>
-                            </div>
-                            <div class="form-check" style="margin-top:12px">
-                            <input class="form-check-input"  type="radio" name="cases" value="5" id="case5">
-                            <label class="form-check-label" for="case5">
-                                Кейс 5
-                            </label>
+                                <input class="form-check-input"  type="radio" name="cases" value="3" id="case3">
+                                <label class="form-check-label" for="case3">
+                                    Кейс 3
+                                </label>
                             </div>
                         </div>
                         <div class="col-sm">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="cases" value="6" id="case6">
-                            <label class="form-check-label" for="case6">
-                                Кейс 6
-                            </label>
+                            <div class="form-check">
+                                <input class="form-check-input"  type="radio" name="cases" value="4" id="case4">
+                                <label class="form-check-label" for="case4">
+                                    Кейс 4
+                                </label>
+                            </div>
+                            <div class="form-check" style="margin-top:12px">
+                                <input class="form-check-input"  type="radio" name="cases" value="5" id="case5">
+                                <label class="form-check-label" for="case5">
+                                    Кейс 5
+                                </label>
+                            </div>
+                            <div class="form-check" style="margin-top:12px">
+                                <input class="form-check-input" type="radio" name="cases" value="6" id="case6">
+                                <label class="form-check-label" for="case6">
+                                    Кейс 6
+                                </label>
                             </div>
                         </div>
                     </div>
