@@ -31,5 +31,5 @@ Route::group(['middleware' => ['auth']], function() {
 Route::get('/login', [CustomAuthController::class, 'index'])->name('login');
 Route::post('/login', [CustomAuthController::class, 'customLogin'])->name('login');
 Route::get('/', function () {
-    return view('welcome');
+    return redirect(route('login'));
 });
