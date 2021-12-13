@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" style="font-size:100%;">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,14 +22,14 @@
                     <img class="navbar-brand" src="img/logo.svg" style="width:60%" alt="">
                 </div>
                 <div class="col-sm-8" style="text-align:center; margin-top:1%">
-                    <p style="font-size:24px; font-weight:700; color:#fff; white-space: nowrap;">Тренажер по составлению декларации о доходах и имуществе физического лица (ФНО 270.00)</p>
+                    <p style="font-size:1.5rem; font-weight:700; color:#fff; white-space: nowrap;">Тренажер по составлению декларации о доходах и имуществе физического лица (ФНО 270.00)</p>
                 </div>
-                <div class="col-sm-2" style="text-align:right; margin-top:1%; font-size:18px; font-weight:400">
-                    <a class="dropdown-toggle dropdown-color" style="font-size: 18px;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="col-sm-2" style="text-align:right; margin-top:1%; font-size:1.125rem; font-weight:400">
+                    <a class="dropdown-toggle dropdown-color" style="font-size: 1.125rem;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Русский
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#" style="font-size:18px; font-weight:400">Казахский</a>
+                    <a class="dropdown-item" href="#" style="font-size:1.125rem; font-weight:400">Казахский</a>
                     </div>
                 </div>
             </div>
@@ -37,13 +37,13 @@
     </nav>
     <div class="mainBg" style="height: 1000px;">
         <div class="whiteBox">
-            <h1 style="color:#2C2567; font-size:24px; font-weight:700;">Добро пожаловать!</h1>
+            <h1 style="color:#2C2567; font-size:1.5rem; font-weight:700;">Добро пожаловать!</h1>
             <div class="goldBorder">
-                <p style="color:#2C2567; font-size:15px; font-weight:700; margin-bottom: 0rem;">Выберите один кейс, по которому пройдет тренинг.</p>
-                <p style="color:#2C2567; font-size:15px; font-weight:700; margin-bottom: 0rem;">Используйте подсказки при заполнении полей. После заполнения у вас будет возможность проверить свои результаты.</p>
+                <p style="color:#2C2567; font-size:0.9375rem; font-weight:700; margin-bottom: 0rem;">Выберите один кейс, по которому пройдет тренинг.</p>
+                <p style="color:#2C2567; font-size:0.9375rem; font-weight:700; margin-bottom: 0rem;">Используйте подсказки при заполнении полей. После заполнения у вас будет возможность проверить свои результаты.</p>
             </div>
             <div class="selectCase" id="selectCaseBtn">
-                <p id="selectCaseText" style="color:#939DA8; font-size:15px; font-weight:700; margin-bottom: 0rem; text-align:left">Выберите один кейс <img id="selectCaseIcon" src="img/dropdownIcon.svg" alt="" style="float:right; margin-top:10px"></p>
+                <p id="selectCaseText" style="color:#939DA8; font-size:0.9375rem; font-weight:700; margin-bottom: 0rem; text-align:left">Выберите один кейс <img id="selectCaseIcon" src="assets/img/dropdownIcon.svg" alt="" style="float:right; margin-top:10px"></p>
             </div>
             <div class="selectCaseOpen close" id="selectCaseMenu">
                 <div class="container" style="text-align:left">
@@ -101,7 +101,7 @@
                     <img src="img/madeby.svg" alt="">
                 </div>
                 <div class="col-sm-3">
-                    <p style="font-size:22px; font-weight:700; text-decoration: underline; color:#D2AB67; margin-top:6%">#ВМЕСТЕКРАЗВИТИЮ</p>
+                    <p style="font-size:1.375rem; font-weight:700; text-decoration: underline; color:#D2AB67; margin-top:6%">#ВМЕСТЕКРАЗВИТИЮ</p>
                 </div>
                 <div class="col-sm-8">
                     <button type="button" class="btn btnCustom"><img src="img/supportIcon.svg" alt=""> Тех. поддержка</button>

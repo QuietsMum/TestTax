@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" style="height: 100%;">
+<html lang="en" style="height: 100%; font-size:100%;">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,14 +22,14 @@
                 <img class="navbar-brand" src="{{ asset('img/logo.svg') }}" style="width:60%" alt="">
                 </div>
                 <div class="col-sm-8" style="text-align:center; margin-top:1%">
-                <p style="font-size:24px; font-weight:700; color:#fff; white-space: nowrap;">Тестирование по составлению декларации о доходах и имуществе физического лица (ФНО 270.00)</p>
+                <p style="font-size:1.5rem; font-weight:700; color:#fff; white-space: nowrap;">Тестирование по составлению декларации о доходах и имуществе физического лица (ФНО 270.00)</p>
                 </div>
-                <div class="col-sm-2" style="text-align:right; margin-top:1%; font-size:18px; font-weight:400">
+                <div class="col-sm-2" style="text-align:right; margin-top:1%; font-size:1.125rem; font-weight:400">
                     <a class="dropdown-toggle dropdown-color" style="font-size: 18px;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Русский
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#" style="font-size:18px; font-weight:400">Казахский</a>
+                    <a class="dropdown-item" href="#" style="font-size:1.125rem; font-weight:400">Казахский</a>
                     </div>
                 </div>
             </div>
@@ -39,7 +39,7 @@
     <div class="container-fluid h-100">
        <div class="row h-100">
            <div class="col-sm-5 leftBox">
-                <p style="font-size: 29px; font-weight: 700; color:#fff; margin-top: 90px;">Добро пожаловать на тестирование по составлению декларации о доходах и имуществе
+                <p style="font-size: 1.8125rem; font-weight: 700; color:#fff; margin-top: 90px;">Добро пожаловать на тестирование по составлению декларации о доходах и имуществе
                     физического лица</p>
                 <form style="margin-top: 50px;">
                     <div class="form-group">
@@ -63,7 +63,7 @@
            </div>
            <div class="col-sm-7 rightBox">
                 <div style="text-align: center;">
-                    <p style="font-size: 36px; font-weight: 700; color:#2C2567; margin-top: 90px;">Ознакомьтесь с правилами </br>и рекомендациями</p>
+                    <p style="font-size: 2.25rem; font-weight: 700; color:#2C2567; margin-top: 90px;">Ознакомьтесь с правилами </br>и рекомендациями</p>
                 </div>
                 <div class="whiteBox4">
                     <ul>
@@ -75,7 +75,7 @@
                         <li>рекомендуем пройти пробное тестирование на нашем тренажере</li>
                     </ul>
                 </div>
-                <p style="font-size: 24px; font-weight: 700; color:#2C2567; text-align: center; margin-top: 50px; margin-bottom: 80px;">Удачного тестирования!</p>
+                <p style="font-size: 1.5rem; font-weight: 700; color:#2C2567; text-align: center; margin-top: 50px; margin-bottom: 80px;">Удачного тестирования!</p>
 
            </div>
        </div>
@@ -88,7 +88,7 @@
                     <img src="{{ asset('img/madeby.svg') }}" alt="">
                 </div>
                 <div class="col-sm-3">
-                    <p style="font-size:22px; font-weight:700; text-decoration: underline; color:#D2AB67; margin-top:6%">#ВМЕСТЕКРАЗВИТИЮ</p>
+                    <p style="font-size:1.375rem; font-weight:700; text-decoration: underline; color:#D2AB67; margin-top:6%">#ВМЕСТЕКРАЗВИТИЮ</p>
                 </div>
                 <div class="col-sm-8">
                     <button type="button" class="btn btnCustom"><img src="{{ asset('img/supportIcon.svg') }}" alt=""> Тех. поддержка</button>
