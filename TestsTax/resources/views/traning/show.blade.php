@@ -115,6 +115,7 @@
             <div >
                 <div class="whiteBox2 open" id="showCaseBlock">
                     <p id="caseDisc">Государственный служащий («М», ИИН 731201400135), в 2021 году:</p>
+                    <div id="caseDiscPlus" class="goldHighlight"></div>
                 </div>
                 <div class="whiteBox3" id="formBox" style="  font-family: 'Times New Roman', Times, serif!important;">
                     <form method="post" id="myform" action="{{ route('training_store', $id) }}">
@@ -1782,8 +1783,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script>
             let disc =  @json($disc['disc']);
+            let discplus =  @json($disc['disc_plus']);
             let id =  @json($id);
             document.getElementById('caseDisc').innerHTML = disc;
+            document.getElementById('caseDiscPlus').innerHTML = discplus;
             document.getElementById('caseDiscSmall').innerHTML = 'Кейс ' + id + ' ' + disc.slice(0, 100);
         $("#showCaseBtn").click(function(){
             $("#showCaseBlock").toggleClass("open close");

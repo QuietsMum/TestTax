@@ -16,6 +16,7 @@ class CreateTraningDiscsTable extends Migration
         Schema::create('traning_discs', function (Blueprint $table) {
             $table->id();
             $table->text('disc');
+            $table->text('disc_plus');
             $table->timestamps();
         });
     }
