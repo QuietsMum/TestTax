@@ -1,21 +1,37 @@
 * {
     font-family: 'Roboto Condensed', sans-serif!important;
 }
+html{
+    font-size: 110%;
+}
 .bg-custom {
-    background-color: #160B50;
+    background-color: #2C2567;
+}
+.bg-custom3 {
+    background-color: #2C2567;
 }
 .bg-custom2 {
     background-color: #fff;
 }
 .dropdown-toggle {
     padding: 12px;
-    background-color: #282781;
+    background-color: #2C2567;
     border-radius: 4px;
     color:#fff;
 }
 .dropdown-toggle:hover {
     color: #fff;
     text-decoration:none;
+}
+.dropdown-color {
+    padding: 12px;
+    background-color: #D2AB67;
+    border-radius: 4px;
+    color:#2C2567;
+}
+.dropdown-color:hover {
+    color: #2C2567; 
+    text-decoration:none;  
 }
 .dropdown-menu {
     left:unset!important;
@@ -70,7 +86,7 @@
     margin-top:15px;
     color: #6F6F6F;
     background-color: #F6F6F9;
-    font-size: 15px!important;
+    font-size: 0.9375rem!important;
     font-weight: 700!important;
     height: 48px;
 }
@@ -79,16 +95,16 @@
     width: 126px;
     color: #6F6F6F;
     background-color: #F6F6F9;
-    font-size: 15px!important;
+    font-size: 0.9375rem!important;
     font-weight: 700!important;
 }
 
 .btnCustom2 {
-    background: #282781;
+    background: #2C2567;
     box-shadow: 0px 1px 3px rgba(43, 42, 53, 0.12);
     border-radius: 4px;
     color: #fff;
-    font-size: 14px!important;
+    font-size: 0.875rem!important;
     font-weight: 700!important;
     position: absolute;
     left: 0;
@@ -141,7 +157,7 @@
 .form-check-label {
     color: #4E4E4E;
     font-weight: 400!important;
-    font-size: 15px!important;
+    font-size: 0.9375rem!important;
 }
 .close .open {
     display: block;
@@ -150,7 +166,7 @@
     display: none;
 }
 .sidebar {
-   background-color: #160B50;
+   background-color: #2C2567;
    position: relative!important;
    bottom: -1px;
    max-width: 198px!important;
@@ -171,14 +187,14 @@
    margin-top: 10px;
 }
 .sectionTabLink {
-    font-size: 12px!important;
+    font-size: 0.875rem!important;
     font-weight: 400!important;
     text-decoration:none;
     color: #fff;
     opacity: 0.6;
 }
 .sectionTabLink:hover {
-    font-size: 12px!important;
+    font-size: 0.875rem!important;
     font-weight: 700!important;
     text-decoration:none;
     color: #fff;
@@ -186,14 +202,14 @@
 }
 @media (min-width: 1600px){
     .sectionTabLink {
-        font-size: 14px!important;
+        font-size: 0.875rem!important;
         font-weight: 400!important;
         text-decoration:none;
         color: #fff;
         opacity: 0.6;
     }
     .sectionTabLink:hover {
-        font-size: 14px!important;
+        font-size: 0.875rem!important;
         font-weight: 700!important;
         text-decoration:none;
         color: #fff;
@@ -210,56 +226,58 @@
     opacity: unset;
 }
 .homeBtn {
-    font-size: 20px!important;
+    font-size: 1.25rem!important;
     font-weight: 400!important;
     color: #BCBCBC;
     text-decoration:none;
     margin-top: 10px;
 }
 .homeBtn:hover {
-    font-size: 20px!important;
+    font-size: 1.25rem!important;
     font-weight: 400!important;
     color: #BCBCBC;
     text-decoration:none;
 }
 .btnCustom3 {
-    background: #282781;
+    background: #2C2567;
     border-radius: 4px;
     color: #fff;
     font-weight: 700!important;
-    font-size: 18px!important;
+    font-size: 1.125rem!important;
     height: 62px;
     width:123px;
     display: inline-block;
 }
 .btnCustom5 {
-    background: #282781;
+    background: #2C2567;
     border-radius: 4px;
     color: #fff;
     font-weight: 700!important;
-    font-size: 14px!important;
+    font-size: 0.875rem!important;
     width:200px;
     margin-top: 10px;
     float: right;
 }
 .btnCustom6 {
-    background: #282781;
+    background: #2C2567;
     border-radius: 4px;
     color: #fff;
     font-weight: 700!important;
-    font-size: 14px!important;
+    font-size: 0.9375rem!important;
     padding: 8px 24px;
     width: 126px;
 }
 .whiteBox2 {
     background-color: #F9FAFF;
     padding: 30px;
-    font-size: 16px!important;
+    font-size: 1rem!important;
     font-weight: 400!important;
     box-shadow: 0px 12px 16px rgba(36, 77, 116, 0.03);
 }
 .goldHighlight {
     background: #E5D2B2;
+    font-size: 0.875rem!important;
+    font-style: italic;
 }
 .btnCustom4 {
     background: #24AF64;
@@ -270,7 +288,7 @@
     height: 48px;
     float: right;
     font-weight: 700!important;
-    font-size: 18px!important;
+    font-size: 1.125rem!important;
     margin-left: 20px;
 }
 .whiteBox3 {
@@ -293,7 +311,7 @@
     margin: auto;
     margin-top: 20px;
     text-align: center;
-    height: 40vh;
+    height: 60vh;
     overflow-y: scroll;
     font-family: 'Times New Roman', Times, serif!important;
 }
@@ -318,20 +336,20 @@
         margin: auto;
         margin-top: 20px;
         text-align: center;
-        height: 53vh;
+        height: 60vh;
         overflow-y: scroll;
         font-family: 'Times New Roman', Times, serif!important;
     }
 }
 .formText {
     font-weight: 400!important;
-    font-size: 16px!important;
+    font-size: 1.125rem!important;
     color: #000;
     font-family: 'Times New Roman', Times, serif!important;
 }
 .formText2 {
     font-weight: 400!important;
-    font-size: 13px!important;
+    font-size: 0.875rem!important;
     color: #000;
     font-family: 'Times New Roman', Times, serif!important;
 }
@@ -359,7 +377,7 @@
 th, td {
     border: 1px solid #000000;
     font-weight: 400!important;
-    font-size: 13px!important;
+    font-size: 0.875rem!important;
     font-family: 'Times New Roman', Times, serif!important;
 }
 .tableInput {
@@ -437,7 +455,7 @@ th, td {
 }
 .whiteBoxInfo {
     padding: 30px;
-    width:75%;
+    width:80%;
     background-color: #fff;
     text-align: justify;
     margin-top: 30px;
@@ -447,7 +465,7 @@ th, td {
     right: 0;
     box-shadow: 0px 0px 40px rgba(152, 19, 75, 0.05);
     position: fixed;
-    height: 89%;
+    height: 80vh;
     overflow-y: auto;
 }
 .error {
@@ -458,7 +476,15 @@ th, td {
 }
 .leftBox {
     padding: 40px!important;
-    background-color: #282781;
+    background-color: #2C2567;
+    background-image: url('../img/mainBG2.png');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-attachment: fixed;
 }
 .form-control {
     padding: 16px!important;
@@ -469,21 +495,21 @@ th, td {
 }
 ::placeholder {
     color: #5D6065!important;
-    font-size: 15px!important;
+    font-size: 0.9375rem!important;
     font-weight: 700!important
   }
 .formPlaceholderStyle {
     color: #5D6065!important;
-    font-size: 15px!important;
+    font-size: 0.9375rem!important;
     font-weight: 700!important;
 }
 .btnCustom8 {
     background: #D2AB67;
     box-shadow: 0px 1px 3px rgba(43, 42, 53, 0.12);
     border-radius: 4px;
-    color: #160B50;
+    color: #2C2567;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 0.875rem;
     margin-top: 40px;
     width: 180px;
     margin-bottom: 80px;
@@ -497,8 +523,8 @@ th, td {
     box-shadow: 0px 0px 40px rgba(152, 19, 75, 0.05);
     border-radius: 8px;
     padding: 24px;
-    color:#160B50;
-    font-size: 18px;
+    color:#2C2567;
+    font-size: 1.125rem;
     font-weight: 700;
     width: 70%;
     margin: 0 auto;
@@ -506,7 +532,7 @@ th, td {
 }
 .timer {
     color:#F00000;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 700;
 }
 #toTop {
@@ -515,7 +541,7 @@ th, td {
     bottom: 100px;
     right: 40px;
     z-index: 99;
-    font-size: 18px;
+    font-size: 1.125rem;
     border: none;
     outline: none;
     color: white;
@@ -530,7 +556,7 @@ th, td {
     bottom: 100px;
     right: 40px;
     z-index: 99;
-    font-size: 18px;
+    font-size: 1.125rem;
     border: none;
     outline: none;
     color: white;
