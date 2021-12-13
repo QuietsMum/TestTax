@@ -1370,8 +1370,8 @@
              <div class="popupCheck" id="popupCheck" style="display: none;">
                 <div style="text-align: center;">
                     <p style="color:#282781; font-size:22px; font-weight:400">Тестирование завершено!</p>
-                    <img src="{{ asset('img/errorIcon.svg') }}" alt="">
-                    <p style="color:#282781; font-size:18px; font-weight:400; margin-top: 25px; margin-bottom: 0;">Вы допустили ошибки в разделах:</p>
+                    <img id="blocksImg" src="{{ asset('img/errorIcon.svg') }}" alt="">
+                    <p id="blocksHeader" style="color:#282781; font-size:18px; font-weight:400; margin-top: 25px; margin-bottom: 0;">Вы допустили ошибки в разделах:</p>
                     <p className='element' id="blocks" style="color:#e84a4a; font-size:18px; font-weight:400; margin-bottom:25px"></p>
                     <button type="button" class="btn btnCustom7" onclick="location.href='{{ route('training') }}';">Выйти</button>
                     <button type="button" class="btn btnCustom6" onclick="closeInfoPopupCheck()">Исправить</button>
@@ -1810,6 +1810,10 @@
             showInfoPopupCheck();
             console.log(blocks);
             document.getElementById('blocks').innerHTML = blocks;
+            if(mistakes.length == 0){
+            document.getElementById('blocksHeader').innerHTML = "Вы ответили правильно на 100%";
+            document.getElementById("blocksImg").src = "{{ asset('img/sucessIcon.svg') }}";
+            }
             for (let i=0; mistakes.length; i++) {
               document.getElementById(mistakes[i]).style = "background-color: #FFEAEA";
 
