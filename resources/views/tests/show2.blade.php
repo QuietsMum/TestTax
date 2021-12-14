@@ -103,7 +103,7 @@
                 <div class="whiteBox2 open" id="showCaseBlock">
                     <p id="caseDisc">Государственный служащий («М», ИИН 731201400135), в 2021 году:</p>
                 </div>
-                <div class="whiteBox3" id="formBox" style="  font-family: 'Times New Roman', Times, serif!important;">
+                <div class="whiteBox3small" id="formBox" style="  font-family: 'Times New Roman', Times, serif!important;">
                     <form method="post" id="myform" action="{{ route('test_store', $id) }}">
                     @csrf
                     <div class="container">
