@@ -15,14 +15,14 @@
     <title>Тестирование</title>
 </head>
 <body style="height:100%;">
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-custom">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-custom" style="position: sticky;">
         <div class="container-fluid">
             <div class="row" style="width:100%">
                 <div class="col-sm-2">
-                <img class="navbar-brand" src="{{ asset('img/logo.svg') }}" style="width:60%" alt="">
+                <img class="navbar-brand small1" src="{{ asset('img/logo.svg') }}" style="width:60%" alt="">
                 </div>
                 <div class="col-sm-8" style="text-align:center; margin-top:1%">
-                <p style="font-size:22px; font-weight:400; color:#fff">Тестирование по составлению декларации о доходах и имуществе физического лица (ФНО 270.00)</p>
+                <p style="font-size:24px; font-weight:700; color:#fff;">Тестирование по составлению декларации о доходах и имуществе физического лица (ФНО 270.00)</p>
                 </div>
                 <div class="col-sm-2" style="text-align:right; margin-top:1%; font-size:18px; font-weight:400">
                     <a class="dropdown-toggle"href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -63,7 +63,7 @@
            </div>
            <div class="col-sm-7 rightBox">
                 <div style="text-align: center;">
-                    <p style="font-size: 41px; font-weight: 700; color:#282781; margin-top: 90px;">Ознакомьтесь с правилами </br>и рекомендациями</p>
+                    <p style="font-size: 24px; font-weight: 700; color:#2C2567; margin-top: 90px;">Ознакомьтесь с правилами </br>и рекомендациями</p>
                 </div>
                 <div class="whiteBox4">
                     <ul>
@@ -75,7 +75,7 @@
                         <li>рекомендуем пройти пробное тестирование на нашем тренажере</li>
                     </ul>
                 </div>
-                <p style="font-size: 24px; font-weight: 700; color:#282781; text-align: center; margin-top: 50px; margin-bottom: 80px;">Удачного тестирования!</p>
+                <p style="font-size: 24px; font-weight: 700; color:#2C2567; text-align: center; margin-top: 50px; margin-bottom: 80px;">Удачного тестирования!</p>
 
            </div>
        </div>
@@ -88,7 +88,7 @@
                     <img src="{{ asset('img/madeby.svg') }}" alt="">
                 </div>
                 <div class="col-sm-3">
-                    <p style="font-size:22px; font-weight:700; text-decoration: underline; color:#D2AB67; margin-top:6%">#ВМЕСТЕКРАЗВИТИЮ</p>
+                    <p class="small" style="font-size:22px; font-weight:700; text-decoration: underline; color:#D2AB67; margin-top:6%">#ВМЕСТЕКРАЗВИТИЮ</p>
                 </div>
                 <div class="col-sm-8">
                     <a href="{{ route('admin') }}" class="btn btnCustom"><img src="{{ asset('img/supportIcon.svg') }}" alt=""> Тех. поддержка</a>

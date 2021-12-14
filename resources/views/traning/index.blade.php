@@ -1,5 +1,3 @@
-$traning
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,14 +15,14 @@ $traning
     <title>Тренажер</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-custom">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-custom" style="position: sticky;">
         <div class="container-fluid">
             <div class="row" style="width:100%">
                 <div class="col-sm-2">
-                <img class="navbar-brand" src="img/logo.svg" style="width:60%" alt="">
+                <img class="navbar-brand small1" src="img/logo.svg" style="width:60%" alt="">
                 </div>
                 <div class="col-sm-8" style="text-align:center; margin-top:1%">
-                <p style="font-size:22px; font-weight:400; color:#fff">Тренажер по составлению декларации о доходах и имуществе физического лица (ФНО 270.00)</p>
+                <p style="font-size:24px; font-weight:700; color:#fff;">Тренажер по составлению декларации о доходах и имуществе физического лица (ФНО 270.00)</p>
                 </div>
                 <div class="col-sm-2" style="text-align:right; margin-top:1%; font-size:18px; font-weight:400">
                     <a class="dropdown-toggle"href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -37,12 +35,12 @@ $traning
             </div>
         </div>
     </nav>
-    <div class="mainBg" style="height: 1000px;">
+    <div class="mainBg">
         <div class="whiteBox">
             <h1 style="color:#160B50; font-size:24px; font-weight:700;">Добро пожаловать!</h1>
             <div class="goldBorder">
-                <p style="color:#282781; font-size:15px; font-weight:700; margin-bottom: 0rem;">Выберите один кейс, по которому пройдет тренинг.</p>
-                <p style="color:#282781; font-size:15px; font-weight:700; margin-bottom: 0rem;">Используйте подсказки при заполнении полей. После заполнения у вас будет возможность проверить свои результаты.</p>
+                <p style="color:#2C2567; font-size:15px; font-weight:700; margin-bottom: 0rem;">Выберите один кейс, по которому пройдет тренинг.</p>
+                <p style="color:#2C2567; font-size:15px; font-weight:700; margin-bottom: 0rem;">Используйте подсказки при заполнении полей. После заполнения у вас будет возможность проверить свои результаты.</p>
             </div>
             <div class="selectCase" id="selectCaseBtn">
                 <p id="selectCaseText" style="color:#939DA8; font-size:15px; font-weight:700; margin-bottom: 0rem; text-align:left">Выберите один кейс <img id="selectCaseIcon" src="img/dropdownIcon.svg" alt="" style="float:right; margin-top:10px"></p>
@@ -103,7 +101,7 @@ $traning
                     <img src="img/madeby.svg" alt="">
                 </div>
                 <div class="col-sm-3">
-                    <p style="font-size:22px; font-weight:700; text-decoration: underline; color:#D2AB67; margin-top:6%">#ВМЕСТЕКРАЗВИТИЮ</p>
+                    <p class="small" style="font-size:22px; font-weight:700; text-decoration: underline; color:#D2AB67; margin-top:6%">#ВМЕСТЕКРАЗВИТИЮ</p>
                 </div>
                 <div class="col-sm-8">
                     <a href="{{ route('admin') }}" class="btn btnCustom"><img src="img/supportIcon.svg" alt=""> Тех. поддержка</a>
@@ -111,7 +109,6 @@ $traning
             </div>
         </div>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

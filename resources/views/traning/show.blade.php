@@ -19,7 +19,7 @@
     <div class="row no-gutter">
         <div class="col-sm-1 sidebar">
             <!-- <div style="position:fixed;"> -->
-                <img src="{{ asset('img/logo.svg') }}" style="width:70%" alt="">
+                <img src="{{ asset('img/logo.svg') }}" style="width:80%" alt="">
             <!-- </div> -->
             <div>
             <div class="sectionTab first" style="margin-top: 20px;">
@@ -97,7 +97,7 @@
                     <div class="row" style="width:100%">
                         <div class="col-sm-4" style="margin-top:1%">
                             <a href="{{ route('training') }}" class="homeBtn"> <img src="{{ asset('img/home.svg') }}" alt="" style="margin-top: -9px; margin-right: 5px;"> На главную</a>
-                            <span style="font-size:20px; font-weight:400; color:#000;text-decoration-line: underline; margin-left: 10px;">Тренажер</span>
+                            <span style="font-size:22px; font-weight:400; color:#000;text-decoration-line: underline; margin-left: 10px;">Тренажерный модуль</span>
                         </div>
                         <div class="col-sm-8" style="text-align:right; font-size:18px; font-weight:400">
                             <div class="row" style="float:right">
@@ -174,13 +174,13 @@
                         <div class="row"  style="padding-left:15px; padding-right:15px;">
                             <div style="display:flex; width:100%">
                                 <label class="formText" for="declTypeInput" style="text-align: left; white-space: nowrap;">первоначальная</label>
-                                <input type="checkbox" class="formTextBox" style="width:2%" id="declarationtype" name="declarationtype" value="первоначальная" <?php if(isset($_POST['declarationtype'])) echo "checked='checked'"; ?>>
+                                <input type="checkbox" class="formTextBox checkboxSmall" style="width:2%" id="declarationtype" name="declarationtype" value="первоначальная" <?php if(isset($_POST['declarationtype'])) echo "checked='checked'"; ?>>
                                 <label class="formText" for="declTypeInput2" style="text-align: left; white-space: nowrap;">очередная</label>
-                                <input type="checkbox" class="formTextBox" style="width:2%" id="declarationtype" name="declarationtype" value="очередная">
+                                <input type="checkbox" class="formTextBox checkboxSmall" style="width:2%" id="declarationtype" name="declarationtype" value="очередная">
                                 <label class="formText" for="declTypeInput3" style="text-align: left; white-space: nowrap;">дополнительная</label>
-                                <input type="checkbox" class="formTextBox" style="width:2%" id="declarationtype" name="declarationtype" value="дополнительная">
+                                <input type="checkbox" class="formTextBox checkboxSmall" style="width:2%" id="declarationtype" name="declarationtype" value="дополнительная">
                                 <label class="formText" for="declTypeInput4" style="text-align: left; white-space: nowrap;">дополнительная по уведомлению</label>
-                                <input type="checkbox" class="formTextBox" style="width:2%" id="declarationtype" name="declarationtype" value="дополнительная по уведомлению">
+                                <input type="checkbox" class="formTextBox checkboxSmall" style="width:2%" id="declarationtype" name="declarationtype" value="дополнительная по уведомлению">
                             </div>
                         </div>
                          <!-- РАЗДЕЛ B -->
@@ -1027,23 +1027,23 @@
             </div>
             <button onclick="topFunction()" id="toTop"> <img src="{{ asset('img/upBtn.svg') }}" alt=""> </button>
             <button onclick="bottomFunction()" id="toBottom"> <img src="{{ asset('img/downBtn.svg') }}" alt=""> </button>
-            <div class="footer2">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-1">
-                            <img src="{{ asset('img/madeby.svg') }}" alt="">
-                        </div>
-                        <div class="col-sm-3">
-                            <p style="font-size:22px; font-weight:700; text-decoration: underline; color:#D2AB67; margin-top:5%; margin-left: 10px;">#ВМЕСТЕКРАЗВИТИЮ</p>
-                        </div>
-                        <div class="col-sm-8">
-                            <!-- <button type="button" class="btn btnCustom4"  onclick="showInfoPopupCheck()"> Проверить</button> -->
-                            <input type="submit" form="myform" class="btn btnCustom4" name="submit" value="Проверить"/>
-                            <!-- <button type="button" class="btn btnCustom"><img src="{{ asset('img/supportIcon.svg') }}" alt=""> Тех. поддержка</button> -->
+                <div class="footer2">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-1">
+                                <img src="{{ asset('img/madeby.svg') }}" alt="">
+                            </div>
+                            <div class="col-sm-3">
+                                <p class="small2" style="font-size:22px; font-weight:700; text-decoration: underline; color:#D2AB67; margin-top:5%; margin-left: 10px;">#ВМЕСТЕКРАЗВИТИЮ</p>
+                            </div>
+                            <div class="col-sm-8">
+                                <!-- <button type="button" class="btn btnCustom4"  onclick="showInfoPopupCheck()"> Проверить</button> -->
+                                <input type="submit" form="myform" class="btn btnCustom4" name="submit" value="Проверить"/>
+                                <!-- <button type="button" class="btn btnCustom"><img src="{{ asset('img/supportIcon.svg') }}" alt=""> Тех. поддержка</button> -->
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             <!-- Info PopUps -->
             <div class="popupInfo" id="infoA" style="display: none;">
                 <img src="{{ asset('img/closeIcon.svg') }}" class="closeIcon" alt="" onclick="closeInfoPopupA()">
@@ -1369,9 +1369,9 @@
             </div>
              <div class="popupCheck" id="popupCheck" style="display: none;">
                 <div style="text-align: center;">
-                    <p style="color:#282781; font-size:22px; font-weight:400">Тестирование завершено!</p>
+                    <p style="color:#2C2567; font-size:22px; font-weight:400">Тестирование завершено!</p>
                     <img id="blocksImg" src="{{ asset('img/errorIcon.svg') }}" alt="">
-                    <p id="blocksHeader" style="color:#282781; font-size:18px; font-weight:400; margin-top: 25px; margin-bottom: 0;">Вы допустили ошибки в разделах:</p>
+                    <p id="blocksHeader" style="color:#2C2567; font-size:18px; font-weight:400; margin-top: 25px; margin-bottom: 0;">Вы допустили ошибки в разделах:</p>
                     <p className='element' id="blocks" style="color:#e84a4a; font-size:18px; font-weight:400; margin-bottom:25px"></p>
                     <button type="button" class="btn btnCustom7" onclick="location.href='{{ route('training') }}';">Выйти</button>
                     <button type="button" class="btn btnCustom6" onclick="closeInfoPopupCheck()">Исправить</button>
