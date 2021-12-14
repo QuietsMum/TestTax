@@ -24,7 +24,7 @@ $traning
                 <img class="navbar-brand" src="img/logo.svg" style="width:60%" alt="">
                 </div>
                 <div class="col-sm-8" style="text-align:center; margin-top:1%">
-                <p style="font-size:22px; font-weight:400; color:#fff">Тренажер по составлению декларации о доходах и имуществе физического лица (ФНО 270.00)</p>
+                <p style="font-size:22px; font-weight:400; color:#fff">TESTТренажер по составлению декларации о доходах и имуществе физического лица (ФНО 270.00)</p>
                 </div>
                 <div class="col-sm-2" style="text-align:right; margin-top:1%; font-size:18px; font-weight:400">
                     <a class="dropdown-toggle"href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
