@@ -1824,11 +1824,10 @@
                     console.log(mistakes);
                     console.log(percent);
                     document.getElementById('percent').innerHTML = 'Вы ответили правильно на ' + parseInt(percent) + '%';
-                    if(parseInt(percent)>95){
+                    if(parseInt(percent)>80){
                     document.getElementById("percentimg").src= "{{ asset('img/sucessIcon.svg') }}";
                     } else document.getElementById("percentimg").src= "{{ asset('img/errorIcon.svg') }}";
                     showPopupComplete();
-
         @endif
     </script>
 </body>
