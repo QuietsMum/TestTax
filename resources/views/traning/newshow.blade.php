@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
 
-    <title>Тренажер</title>
+    <title>aaТренажер</title>
 </head>
 <body>
     <div class="container-fluid mainBg">
