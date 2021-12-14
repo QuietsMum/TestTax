@@ -117,7 +117,7 @@
                     <p id="caseDisc">Государственный служащий («М», ИИН 731201400135), в 2021 году:</p>
                     <div id="caseDiscPlus" class="goldHighlight"></div>
                 </div>
-                <div class="whiteBox3" id="formBox" style="  font-family: 'Times New Roman', Times, serif!important;">
+                <div class="whiteBox3small" id="formBox" style="  font-family: 'Times New Roman', Times, serif!important;">
                     <form method="post" id="myform" action="{{ route('training_store', $id) }}">
                     @csrf
                     <div class="container">
