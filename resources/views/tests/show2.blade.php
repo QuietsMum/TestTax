@@ -80,7 +80,7 @@
                 <div class="container-fluid">
                     <div class="row" style="width:100%">
                         <div class="col-sm-4" style="margin-top:1%">
-                            <a href="{{ route('test') }}" class="homeBtn"> <img src="{{ asset('img/home.svg') }}" alt="" style="margin-top: -9px; margin-right: 5px;"> На главную</a>
+                            <a href="javascript:showInfoPopupHome()" class="homeBtn"> <img src="{{ asset('img/home.svg') }}" alt="" style="margin-top: -9px; margin-right: 5px;"> На главную</a>
                             <span style="font-size:20px; font-weight:400; color:#000;text-decoration-line: underline; margin-left: 10px;">Тестирование</span>
                         </div>
                         <div class="col-sm-8" style="text-align:right; font-size:18px; font-weight:400">
@@ -155,7 +155,7 @@
                             <p class="formText2">(несовершеннолетнего и (или) недееспособного или ограниченно дееспособного)</p>
                         </div>
                         <div class="row"  style="padding-left:15px; padding-right:15px;">
-                            <p class="formText">5. Вид декларации (укажите X в соответствующей ячейке)</p>
+                            <p class="formText">5. Вид декларации (укажите ✔ в соответствующей ячейке)</p>
                         </div>
                         <div class="row"  style="padding-left:15px; padding-right:15px;">
                             <div style="display:flex; width:100%">
@@ -1346,6 +1346,14 @@
                     <button type="button" class="btn btnCustom6" onclick="closeInfoPopupCheck()">Продолжить тест</button>
                 </div>
             </div>
+            <div class="popupCheck" id="popupHome" style="display: none;">
+                <div style="text-align: center;">
+                    <p style="color:#282781; font-size:22px; font-weight:400">Завершить тест?</p>
+                    <p style="color:#000; font-size:18px; font-weight:400; margin-top: 25px; margin-bottom: 25px;">Время тестирования еще не закончилось. Уверены, что хотите выйти?</p>
+                    <button type="button" class="btn btnCustom7" onclick="location.href='{{ route('test') }}';">Выйти</button>
+                    <button type="button" class="btn btnCustom6" onclick="closeInfoPopupHome()">Продолжить тест</button>
+                </div>
+            </div>
             <div class="popupMask"  id="popupMask" style="display: none;"></div>
         </div>
     </div>
@@ -1714,6 +1722,18 @@
     }
     function closeInfoPopupCheck() {
      var checkPopup = document.getElementById("popupCheck");
+      var popupMask = document.getElementById("popupMask");
+      checkPopup.style.display = "none";
+      popupMask.style.display = "none";
+    }
+    function showInfoPopupHome() {
+      var checkPopup = document.getElementById("popupHome");
+      var popupMask = document.getElementById("popupMask");
+      checkPopup.style.display = "block";
+      popupMask.style.display = "block";
+    }
+    function closeInfoPopupHome() {
+     var checkPopup = document.getElementById("popupHome");
       var popupMask = document.getElementById("popupMask");
       checkPopup.style.display = "none";
       popupMask.style.display = "none";

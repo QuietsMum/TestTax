@@ -30,8 +30,8 @@ html{
     color:#2C2567;
 }
 .dropdown-color:hover {
-    color: #2C2567; 
-    text-decoration:none;  
+    color: #2C2567;
+    text-decoration:none;
 }
 .dropdown-menu {
     left:unset!important;
@@ -265,7 +265,7 @@ html{
     font-weight: 700!important;
     font-size: 0.9375rem!important;
     padding: 8px 24px;
-    width: 126px;
+    width: 150px;
 }
 .whiteBox2 {
     background-color: #F9FAFF;

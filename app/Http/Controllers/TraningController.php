@@ -575,10 +575,9 @@ class TraningController extends Controller
 
 //          return view('traning.show', ['id' => $id,
 //                  'request' => $request]);
-
-            $mispercent = $miscount*100/110;
+            $misDB = [15, 28, 27, 42, 16, 15];
+            $mispercent = $miscount*100/$misDB[$id-1];
             $percent = 100 - $mispercent;
-
              return view('tests.show2', [
                                       'traning' => Traning::findOrFail($id),
                                       'id' => $id,
