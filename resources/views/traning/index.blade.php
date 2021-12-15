@@ -81,10 +81,34 @@
                             </div>
                         </div>
                         <div class="col-sm">
-                        <div class="form-check">
+                            <div class="form-check">
                             <input class="form-check-input" type="radio" name="cases" value="6" id="case6">
                             <label class="form-check-label" for="case6">
                                 Кейс 6
+                            </label>
+                            </div>
+                            <div class="form-check" style="margin-top:12px">
+                            <input class="form-check-input" type="radio" name="cases" value="7" id="case7">
+                            <label class="form-check-label" for="case7">
+                                Кейс 7
+                            </label>
+                            </div>
+                            <div class="form-check" style="margin-top:12px">
+                            <input class="form-check-input" type="radio" name="cases" value="8" id="case8">
+                            <label class="form-check-label" for="case8">
+                                Кейс 8
+                            </label>
+                            </div>
+                            <div class="form-check" style="margin-top:12px">
+                            <input class="form-check-input" type="radio" name="cases" value="9" id="case9">
+                            <label class="form-check-label" for="case9">
+                                Кейс 9
+                            </label>
+                            </div>
+                            <div class="form-check" style="margin-top:12px">
+                            <input class="form-check-input" type="radio" name="cases" value="10" id="case10">
+                            <label class="form-check-label" for="case10">
+                                Кейс 10
                             </label>
                             </div>
                         </div>

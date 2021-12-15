@@ -58,7 +58,7 @@
                       </div>
                 </form>
                 <div style="text-align: center;">
-                    <button type="button" class="btn btnCustom8" onclick="location.href='{{ route('test_show', rand(1,6)) }}';">Начать тест</button>
+                    <button type="button" class="btn btnCustom8" onclick="location.href='{{ route('test_show', rand(1,10)) }}';">Начать тест</button>
                 </div>
            </div>
            <div class="col-sm-7 rightBox">
