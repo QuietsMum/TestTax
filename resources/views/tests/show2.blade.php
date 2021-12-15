@@ -19,7 +19,7 @@
     <div class="row no-gutter">
         <div class="col-sm-1 sidebar">
             <!-- <div style="position:fixed;"> -->
-                <img src="{{ asset('img/logo.svg') }}" style="width:70%" alt="">
+                <img src="{{ asset('img/logo.svg') }}" style="width:80%" alt="">
             <!-- </div> -->
             <div>
             <div class="sectionTab first" style="margin-top: 20px;">
@@ -80,8 +80,8 @@
                 <div class="container-fluid">
                     <div class="row" style="width:100%">
                         <div class="col-sm-4" style="margin-top:1%">
-                            <a href="{{ route('test') }}" class="homeBtn"> <img src="{{ asset('img/home.svg') }}" alt="" style="margin-top: -9px; margin-right: 5px;"> На главную</a>
-                            <span style="font-size:20px; font-weight:400; color:#000;text-decoration-line: underline; margin-left: 10px;">Тестирование</span>
+                            <a href="javascript:showInfoPopupHome()" class="homeBtn"> <img src="{{ asset('img/home.svg') }}" alt="" style="margin-top: -9px; margin-right: 5px;"> На главную</a>
+                            <span style="font-size:22px; font-weight:400; color:#000;text-decoration-line: underline; margin-left: 10px;">Тестовый модуль</span>
                         </div>
                         <div class="col-sm-8" style="text-align:right; font-size:18px; font-weight:400">
                             <div class="row" style="float:right;">
@@ -103,7 +103,7 @@
                 <div class="whiteBox2 open" id="showCaseBlock">
                     <p id="caseDisc">Государственный служащий («М», ИИН 731201400135), в 2021 году:</p>
                 </div>
-                <div class="whiteBox3" id="formBox" style="  font-family: 'Times New Roman', Times, serif!important;">
+                <div class="whiteBox3small" id="formBox" style="  font-family: 'Times New Roman', Times, serif!important;">
                     <form method="post" id="myform" action="{{ route('test_store', $id) }}">
                     @csrf
                     <div class="container">
@@ -155,18 +155,18 @@
                             <p class="formText2">(несовершеннолетнего и (или) недееспособного или ограниченно дееспособного)</p>
                         </div>
                         <div class="row"  style="padding-left:15px; padding-right:15px;">
-                            <p class="formText">5. Вид декларации (укажите X в соответствующей ячейке)</p>
+                            <p class="formText">5. Вид декларации (укажите ✔ в соответствующей ячейке)</p>
                         </div>
                         <div class="row"  style="padding-left:15px; padding-right:15px;">
                             <div style="display:flex; width:100%">
                                 <label class="formText" for="declTypeInput" style="text-align: left; white-space: nowrap;">первоначальная</label>
-                                <input type="checkbox" class="formTextBox" style="width:2%" id="declarationtype" name="declarationtype" value="первоначальная" <?php if(isset($_POST['declarationtype'])) echo "checked='checked'"; ?>>
+                                <input type="checkbox" class="formTextBox checkboxSmall" style="width:2%" id="declarationtype" name="declarationtype" value="первоначальная" <?php if(isset($_POST['declarationtype'])) echo "checked='checked'"; ?>>
                                 <label class="formText" for="declTypeInput2" style="text-align: left; white-space: nowrap;">очередная</label>
-                                <input type="checkbox" class="formTextBox" style="width:2%" id="declarationtype" name="declarationtype" value="очередная">
+                                <input type="checkbox" class="formTextBox checkboxSmall" style="width:2%" id="declarationtype" name="declarationtype" value="очередная">
                                 <label class="formText" for="declTypeInput3" style="text-align: left; white-space: nowrap;">дополнительная</label>
-                                <input type="checkbox" class="formTextBox" style="width:2%" id="declarationtype" name="declarationtype" value="дополнительная">
+                                <input type="checkbox" class="formTextBox checkboxSmall" style="width:2%" id="declarationtype" name="declarationtype" value="дополнительная">
                                 <label class="formText" for="declTypeInput4" style="text-align: left; white-space: nowrap;">дополнительная по уведомлению</label>
-                                <input type="checkbox" class="formTextBox" style="width:2%" id="declarationtype" name="declarationtype" value="дополнительная по уведомлению">
+                                <input type="checkbox" class="formTextBox checkboxSmall" style="width:2%" id="declarationtype" name="declarationtype" value="дополнительная по уведомлению">
                             </div>
                         </div>
                          <!-- РАЗДЕЛ B -->
@@ -982,18 +982,18 @@
                             <img src="{{ asset('img/madeby.svg') }}" alt="">
                         </div>
                         <div class="col-sm-3">
-                            <p style="font-size:22px; font-weight:700; text-decoration: underline; color:#D2AB67; margin-top:5%; margin-left: 10px;">#ВМЕСТЕКРАЗВИТИЮ</p>
+                            <p class="small2" style="font-size:22px; font-weight:700; text-decoration: underline; color:#D2AB67; margin-top:5%; margin-left: 10px;">#ВМЕСТЕКРАЗВИТИЮ</p>
                         </div>
                         <div class="col-sm-4">
-                            <div style="background: #E84A4A;
+                            <div class="small3" style="background: #E84A4A;
                             border-radius: 4px;padding: 8px; margin-top: 3%;">
                             <p style="font-size:13px; font-weight:500; color:#fff; margin-bottom: 0;">У вас есть 20 минут на выполнение теста.
                                 Не закрывайте, не обновляйте и не покидайте страницу до завершения.</p>
                             </div>
                         </div>
                         <div class="col-sm-4">
-                            <button type="button" class="btn btnCustom4" style="background-color: #282781;"  onclick="showInfoPopupCheck()"> Завершить</button>
-                            <button type="button" class="btn btnCustom"><img src="{{ asset('img/supportIcon.svg') }}" alt=""> Тех. поддержка</button>
+                            <button type="button" class="btn btnCustom4" style="background-color: #2C2567;"  onclick="showInfoPopupCheck()"> Завершить</button>
+                            <a href="{{ route('admin') }}" class="btn btnCustom"><img src="{{ asset('img/supportIcon.svg') }}" alt=""> Тех. поддержка</a>
                         </div>
                     </div>
                 </div>
@@ -1323,27 +1323,35 @@
             </div>
             <div class="popupCheck" id="popupComplete" style="display: none;">
                 <div style="text-align: center;">
-                    <p style="color:#282781; font-size:22px; font-weight:400">Тестирование завершено!</p>
+                    <p style="color:#2C2567; font-size:22px; font-weight:400">Тестирование завершено!</p>
                     <img id="percentimg" src="{{ asset('img/sucessIcon.svg') }}" alt="">
-                    <p className='element' id="percent" style="color:#282781; font-size:18px; font-weight:400; margin-top: 25px; margin-bottom: 25px;"></p>
+                    <p className='element' id="percent" style="color:#2C2567; font-size:18px; font-weight:400; margin-top: 25px; margin-bottom: 25px;"></p>
                     <button type="button" class="btn btnCustom6" onclick="location.href='{{ route('test') }}';">OK</button>
                 </div>
             </div>
             <!-- <div class="popupCheck" id="popupCheck" style="display: none;">
                 <div style="text-align: center;">
-                    <p style="color:#282781; font-size:22px; font-weight:400">Тестирование завершено!</p>
+                    <p style="color:#2C2567; font-size:22px; font-weight:400">Тестирование завершено!</p>
                     <img src="assets/img/sucessIcon.svg" alt="">
-                    <p style="color:#282781; font-size:18px; font-weight:400; margin-top: 25px; margin-bottom: 25px;">Вы ответили правильно на 75%</p>
+                    <p style="color:#2C2567; font-size:18px; font-weight:400; margin-top: 25px; margin-bottom: 25px;">Вы ответили правильно на 75%</p>
                     <button type="button" class="btn btnCustom6" onclick="location.href='index.html';">OK</button>
                 </div>
             </div> -->
             <div class="popupCheck" id="popupCheck" style="display: none;">
                 <div style="text-align: center;">
-                    <p style="color:#282781; font-size:22px; font-weight:400">Завершить тест?</p>
+                    <p style="color:#2C2567; font-size:22px; font-weight:400">Завершить тест?</p>
                     <p style="color:#000; font-size:18px; font-weight:400; margin-top: 25px; margin-bottom: 25px;">Время тестирования еще не закончилось. Уверены, что хотите завершить досрочно?</p>
                     <!-- <button type="button" class="btn btnCustom7" onclick="showPopupComplete()">Завершить</button> -->
                     <input type="submit" form="myform" class="btn btnCustom7" name="submit" value="Завершить"/>
                     <button type="button" class="btn btnCustom6" onclick="closeInfoPopupCheck()">Продолжить тест</button>
+                </div>
+            </div>
+            <div class="popupCheck" id="popupHome" style="display: none;">
+                <div style="text-align: center;">
+                    <p style="color:#2C2567; font-size:22px; font-weight:400">Завершить тест?</p>
+                    <p style="color:#000; font-size:18px; font-weight:400; margin-top: 25px; margin-bottom: 25px;">Время тестирования еще не закончилось. Уверены, что хотите выйти?</p>
+                    <button type="button" class="btn btnCustom7" onclick="location.href='{{ route('test') }}';">Выйти</button>
+                    <button type="button" class="btn btnCustom6" onclick="closeInfoPopupHome()">Продолжить тест</button>
                 </div>
             </div>
             <div class="popupMask"  id="popupMask" style="display: none;"></div>
@@ -1718,6 +1726,18 @@
       checkPopup.style.display = "none";
       popupMask.style.display = "none";
     }
+    function showInfoPopupHome() {
+      var checkPopup = document.getElementById("popupHome");
+      var popupMask = document.getElementById("popupMask");
+      checkPopup.style.display = "block";
+      popupMask.style.display = "block";
+    }
+    function closeInfoPopupHome() {
+     var checkPopup = document.getElementById("popupHome");
+      var popupMask = document.getElementById("popupMask");
+      checkPopup.style.display = "none";
+      popupMask.style.display = "none";
+    }
     function showPopupComplete() {
         var popupComplete = document.getElementById("popupComplete");
         var popupMask = document.getElementById("popupMask");
@@ -1804,11 +1824,10 @@
                     console.log(mistakes);
                     console.log(percent);
                     document.getElementById('percent').innerHTML = 'Вы ответили правильно на ' + parseInt(percent) + '%';
-                    if(parseInt(percent)>95){
+                    if(parseInt(percent)>80){
                     document.getElementById("percentimg").src= "{{ asset('img/sucessIcon.svg') }}";
                     } else document.getElementById("percentimg").src= "{{ asset('img/errorIcon.svg') }}";
                     showPopupComplete();
-
         @endif
     </script>
 </body>

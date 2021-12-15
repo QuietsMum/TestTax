@@ -15,14 +15,14 @@
     <title>Тестирование</title>
 </head>
 <body style="height:100%;">
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-custom">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-custom" style="position: sticky;">
         <div class="container-fluid">
             <div class="row" style="width:100%">
                 <div class="col-sm-2">
-                <img class="navbar-brand" src="{{ asset('img/logo.svg') }}" style="width:60%" alt="">
+                <img class="navbar-brand small1" src="{{ asset('img/logo.svg') }}" style="width:60%" alt="">
                 </div>
                 <div class="col-sm-8" style="text-align:center; margin-top:1%">
-                <p style="font-size:22px; font-weight:400; color:#fff">Тестирование по составлению декларации о доходах и имуществе физического лица (ФНО 270.00)</p>
+                <p style="font-size:24px; font-weight:700; color:#fff;">Тестирование по составлению декларации о доходах и имуществе физического лица (ФНО 270.00)</p>
                 </div>
                 <div class="col-sm-2" style="text-align:right; margin-top:1%; font-size:18px; font-weight:400">
                     <a class="dropdown-toggle"href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -39,30 +39,32 @@
     <div class="container-fluid h-100">
        <div class="row h-100">
            <div class="col-sm-5 leftBox">
-                <p style="font-size: 48px; font-weight: 700; color:#fff; margin-top: 90px;">Добро пожаловать на тестирование</p>
-                <form style="margin-top: 50px;">
+                <p style="font-size: 29px; font-weight: 700; color:#fff; margin-top: 90px;">Добро пожаловать на тестирование по составлению декларации о доходах и имуществе
+                    физического лица</p>
+                <form style="margin-top: 50px;" method="get" id="userform" action="{{ route('test_show', rand(1,10)) }}">
+                @csrf
                     <div class="form-group">
-                        <input type="text" class="form-control"  placeholder="Код">
+                        <input type="text" class="form-control" required="required" id="code" name="code"  placeholder="Код">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control"  placeholder="ИИН">
+                        <input type="text" class="form-control" required="required" id="iin" name="iin"  placeholder="ИИН">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control"  placeholder="Фамилия Имя Отчество">
+                        <input type="text" class="form-control" required="required" id="fio" name="fio"  placeholder="Фамилия Имя Отчество">
                     </div>
                     <div class="form-group">
-                        <select class="form-control formPlaceholderStyle" id="departmentSelect">
-                            <option selected disabled>Подразделение</option>
+                        <select  id="depart" name="depart" class="form-control formPlaceholderStyle" id="departmentSelect">
+                            <option value="Подразделение">Подразделение</option>
                         </select>
                       </div>
                 </form>
                 <div style="text-align: center;">
-                    <button type="button" class="btn btnCustom8" onclick="location.href='{{ route('test_show', rand(1,6)) }}';">Начать тест</button>
+                    <button type="submit" form="userform" class="btn btnCustom8">Начать тест</button>
                 </div>
            </div>
            <div class="col-sm-7 rightBox">
                 <div style="text-align: center;">
-                    <p style="font-size: 41px; font-weight: 700; color:#282781; margin-top: 90px;">Ознакомьтесь с правилами </br>и рекомендациями</p>
+                    <p style="font-size: 24px; font-weight: 700; color:#2C2567; margin-top: 90px;">Ознакомьтесь с правилами </br>и рекомендациями</p>
                 </div>
                 <div class="whiteBox4">
                     <ul>
@@ -74,7 +76,7 @@
                         <li>рекомендуем пройти пробное тестирование на нашем тренажере</li>
                     </ul>
                 </div>
-                <p style="font-size: 24px; font-weight: 700; color:#282781; text-align: center; margin-top: 50px; margin-bottom: 80px;">Удачного тестирования!</p>
+                <p style="font-size: 24px; font-weight: 700; color:#2C2567; text-align: center; margin-top: 50px; margin-bottom: 80px;">Удачного тестирования!</p>
 
            </div>
        </div>
@@ -87,10 +89,10 @@
                     <img src="{{ asset('img/madeby.svg') }}" alt="">
                 </div>
                 <div class="col-sm-3">
-                    <p style="font-size:22px; font-weight:700; text-decoration: underline; color:#D2AB67; margin-top:6%">#ВМЕСТЕКРАЗВИТИЮ</p>
+                    <p class="small" style="font-size:22px; font-weight:700; text-decoration: underline; color:#D2AB67; margin-top:6%">#ВМЕСТЕКРАЗВИТИЮ</p>
                 </div>
                 <div class="col-sm-8">
-                    <button type="button" class="btn btnCustom"><img src="{{ asset('img/supportIcon.svg') }}" alt=""> Тех. поддержка</button>
+                    <a href="{{ route('admin') }}" class="btn btnCustom"><img src="{{ asset('img/supportIcon.svg') }}" alt=""> Тех. поддержка</a>
                 </div>
             </div>
         </div>

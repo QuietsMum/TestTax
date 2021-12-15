@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Traning;
 use App\Models\TraningDisc;
+use App\Models\UsersResults;
 
 class TraningController extends Controller
 {
@@ -50,14 +51,14 @@ class TraningController extends Controller
          $miscount = 0;
          $traning = Traning::findOrFail($id);
          $request->flash();
-         if($request['iin'] != $traning['iin'] || $request['period'] != $traning['period'] || $request['phonename'] != $traning['phonename'] || $request['declarationtype'] != $traning['declarationtype'] || $request['surname'] == '' || $request['email'] == '' || $request['name'] == '' || $request['patronymic'] == '' || $request['phonename'] == ''){
+         if($request['iin'] != $traning['iin'] || $request['period'] != $traning['period'] || $request['phonename'] != '' || $request['declarationtype'] != $traning['declarationtype'] || $request['surname'] == '' || $request['email'] == '' || $request['name'] == '' || $request['patronymic'] == '' || $request['phonename'] == ''){
             if($request['iin'] != $traning['iin']){ array_push($mistakes, "iin"); $miscount++;}
             if($request['period'] != $traning['period']){ array_push($mistakes, "period"); $miscount++;}
             if($request['surname'] == ''){ array_push($mistakes, "surname"); $miscount++;}
             if($request['name'] == ''){ array_push($mistakes, "name"); $miscount++;}
             if($request['patronymic'] == ''){ array_push($mistakes, "patronymic"); $miscount++;}
             if($request['email'] == ''){ array_push($mistakes, "email"); $miscount++;}
-            if($request['phonename'] != $traning['phonename']){ array_push($mistakes, "phonename"); $miscount++;}
+            if($request['phonename'] != ''){ array_push($mistakes, "phonename"); $miscount++;}
             if($request['declarationtype'] != $traning['declarationtype']){ array_push($mistakes, "declarationtype"); $miscount++;}
             $string .= " Разделе А";
          }
@@ -325,14 +326,14 @@ class TraningController extends Controller
          $miscount = 0;
          $traning = Traning::findOrFail($id);
          $request->flash();
-         if($request['iin'] != $traning['iin'] || $request['period'] != $traning['period'] || $request['phonename'] != $traning['phonename'] || $request['declarationtype'] != $traning['declarationtype'] || $request['surname'] == '' || $request['email'] == '' || $request['name'] == '' || $request['patronymic'] == '' || $request['phonename'] == ''){
+         if($request['iin'] != $traning['iin'] || $request['period'] != $traning['period'] || $request['phonename'] != '' || $request['declarationtype'] != $traning['declarationtype'] || $request['surname'] == '' || $request['email'] == '' || $request['name'] == '' || $request['patronymic'] == '' || $request['phonename'] == ''){
             if($request['iin'] != $traning['iin']){ array_push($mistakes, "iin"); $miscount++;}
             if($request['period'] != $traning['period']){ array_push($mistakes, "period"); $miscount++;}
             if($request['surname'] == ''){ array_push($mistakes, "surname"); $miscount++;}
             if($request['name'] == ''){ array_push($mistakes, "name"); $miscount++;}
             if($request['patronymic'] == ''){ array_push($mistakes, "patronymic"); $miscount++;}
             if($request['email'] == ''){ array_push($mistakes, "email"); $miscount++;}
-            if($request['phonename'] != $traning['phonename']){ array_push($mistakes, "phonename"); $miscount++;}
+            if($request['phonename'] != ''){ array_push($mistakes, "phonename"); $miscount++;}
             if($request['declarationtype'] != $traning['declarationtype']){ array_push($mistakes, "declarationtype"); $miscount++;}
             $string .= " Разделе А";
          }
@@ -575,10 +576,9 @@ class TraningController extends Controller
 
 //          return view('traning.show', ['id' => $id,
 //                  'request' => $request]);
-
-            $mispercent = $miscount*100/110;
+            $misDB = [15, 28, 27, 42, 16, 15, 13, 14, 10, 23];
+            $mispercent = $miscount*100/$misDB[$id-1];
             $percent = 100 - $mispercent;
-
              return view('tests.show2', [
                                       'traning' => Traning::findOrFail($id),
                                       'id' => $id,
@@ -590,7 +590,6 @@ class TraningController extends Controller
 //                                    dump($string);
 //                                    dump($miscount);
 //                                    dump($mistakes);
-//
 //                                    dump($percent);
     }
 
@@ -610,8 +609,16 @@ class TraningController extends Controller
                  ]);
     }
 
-      public function show2($id)
+      public function show2(Request $request, $id)
         {
+             UsersResults::create([
+                                        'code' => $request['code'],
+                                        'iin' => $request['iin'],
+                                        'fio' => $request['fio'],
+                                        'depart' => $request['depart'],
+                                        'case' => $id,
+                                        'result' => '',
+                                     ]);
              return view('tests.show2', [
                          'tests' => Traning::findOrFail($id),
                          'disc' => TraningDisc::findOrFail($id),

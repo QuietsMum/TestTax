@@ -33,3 +33,6 @@ Route::post('/login', [CustomAuthController::class, 'customLogin'])->name('login
 Route::get('/', function () {
     return redirect(route('login'));
 });
+Route::get('/admin', function () {
+    return view('admin');
+})->name('admin');
