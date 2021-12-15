@@ -41,24 +41,25 @@
            <div class="col-sm-5 leftBox">
                 <p style="font-size: 29px; font-weight: 700; color:#fff; margin-top: 90px;">Добро пожаловать на тестирование по составлению декларации о доходах и имуществе
                     физического лица</p>
-                <form style="margin-top: 50px;">
+                <form style="margin-top: 50px;" method="get" id="userform" action="{{ route('test_show', rand(1,10)) }}">
+                @csrf
                     <div class="form-group">
-                        <input type="text" class="form-control"  placeholder="Код">
+                        <input type="text" class="form-control" required="required" id="code" name="code"  placeholder="Код">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control"  placeholder="ИИН">
+                        <input type="text" class="form-control" required="required" id="iin" name="iin"  placeholder="ИИН">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control"  placeholder="Фамилия Имя Отчество">
+                        <input type="text" class="form-control" required="required" id="fio" name="fio"  placeholder="Фамилия Имя Отчество">
                     </div>
                     <div class="form-group">
-                        <select class="form-control formPlaceholderStyle" id="departmentSelect">
-                            <option selected disabled>Подразделение</option>
+                        <select  id="depart" name="depart" class="form-control formPlaceholderStyle" id="departmentSelect">
+                            <option value="Подразделение">Подразделение</option>
                         </select>
                       </div>
                 </form>
                 <div style="text-align: center;">
-                    <button type="button" class="btn btnCustom8" onclick="location.href='{{ route('test_show', rand(1,10)) }}';">Начать тест</button>
+                    <button type="submit" form="userform" class="btn btnCustom8">Начать тест</button>
                 </div>
            </div>
            <div class="col-sm-7 rightBox">
