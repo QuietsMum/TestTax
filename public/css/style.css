@@ -665,7 +665,7 @@ th, td {
         margin: auto;
         margin-top: 20px;
         text-align: center;
-        height: 30vh;
+        height: 600px;
         overflow-y: scroll;
         font-family: 'Times New Roman', Times, serif!important;
     }
@@ -677,7 +677,7 @@ th, td {
         margin: auto;
         margin-top: 20px;
         text-align: center;
-        height: 40vh;
+        height: 870px;
         overflow-y: scroll;
         font-family: 'Times New Roman', Times, serif!important;
     }
@@ -686,12 +686,25 @@ th, td {
         max-height: 1080px!important;
      }
     #toBottom {
+        position: sticky;
         bottom: 1180px!important;
-        right: 1000px!important;
+        margin-left: 93%!important;
     }
     #toTop {
+        position: sticky;
         bottom: 1180px!important;
-        right: 1000px!important;
+        margin-left: 93%!important;
     }
     
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
