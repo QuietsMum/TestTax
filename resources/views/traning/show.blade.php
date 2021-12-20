@@ -245,7 +245,7 @@
                         <div id="sectionD" class="row newSection" style="padding-left:15px; padding-right:15px;">
                         <div style="display:flex; width:100%; justify-content: center;">
                             <label class="formText" for="sectionDInput" style="white-space: nowrap;">Раздел D. Сумма налоговых вычетов, не примененных налоговым агентом <span><img onclick="showInfoPopupD()" class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt=""></span></label>
-                            <input type="text" class="formTextBox" style="width:10%" id="sectionDInput">
+                            <input type="number" class="formTextBox" style="width:10%" id="d_1" name="d_1" value="{{ old('d_1') }}">
                         </div>
                         </div>
                             <!-- РАЗДЕЛ E -->

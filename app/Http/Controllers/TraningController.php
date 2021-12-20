@@ -51,14 +51,13 @@ class TraningController extends Controller
          $miscount = 0;
          $traning = Traning::findOrFail($id);
          $request->flash();
-         if($request['iin'] != $traning['iin'] || $request['period'] != $traning['period'] || $request['phonename'] != '' || $request['declarationtype'] != $traning['declarationtype'] || $request['surname'] == '' || $request['email'] == '' || $request['name'] == '' || $request['patronymic'] == '' || $request['phonename'] == ''){
+         if($request['iin'] != $traning['iin'] || $request['period'] != $traning['period'] || $request['phonename'] != '' || $request['declarationtype'] != $traning['declarationtype'] || $request['surname'] == '' || $request['email'] == '' || $request['name'] == '' || $request['phonename'] == ''){
             if($request['iin'] != $traning['iin']){ array_push($mistakes, "iin"); $miscount++;}
             if($request['period'] != $traning['period']){ array_push($mistakes, "period"); $miscount++;}
             if($request['surname'] == ''){ array_push($mistakes, "surname"); $miscount++;}
             if($request['name'] == ''){ array_push($mistakes, "name"); $miscount++;}
-            if($request['patronymic'] == ''){ array_push($mistakes, "patronymic"); $miscount++;}
             if($request['email'] == ''){ array_push($mistakes, "email"); $miscount++;}
-            if($request['phonename'] != ''){ array_push($mistakes, "phonename"); $miscount++;}
+            if($request['phonename'] == ''){ array_push($mistakes, "phonename"); $miscount++;}
             if($request['declarationtype'] != $traning['declarationtype']){ array_push($mistakes, "declarationtype"); $miscount++;}
             $string .= " Разделе А";
          }
@@ -259,6 +258,13 @@ class TraningController extends Controller
                   $countI2 = true;
                   }
          } else $countI2 = true;
+
+         if($request['i_1a'] != '' || $request['i_1b'] != '' || $request['i_1c'] != '' || $request['i_1d'] != '' || $request['i_1e'] != '' || $request['i_1f'] != '' || $request['i_1g'] != '' && $traning['i_1a'] == ''){
+         array_push($mistakes, "i_1a", "i_1b", "i_1c", "i_1d", "i_1e", "i_1f", "i_1g"); $miscount++;
+         }
+         if($request['i_2a'] != '' || $request['i_2b'] != '' || $request['i_2c'] != '' || $request['i_2d'] != '' || $request['i_2e'] != '' || $request['i_2f'] != '' || $request['i_2g'] != '' && $traning['i_2a'] == ''){
+         array_push($mistakes, "i_2a", "i_2b", "i_2c", "i_2d", "i_2e", "i_2f", "i_2g"); $miscount++;
+         }
 
          if(!$countI1 || !$countI2){
             if(!$countI1){ array_push($mistakes, "i_1a", "i_1b", "i_1c", "i_1d", "i_1e", "i_1f", "i_1g"); $miscount++;}
@@ -326,14 +332,13 @@ class TraningController extends Controller
          $miscount = 0;
          $traning = Traning::findOrFail($id);
          $request->flash();
-         if($request['iin'] != $traning['iin'] || $request['period'] != $traning['period'] || $request['phonename'] != '' || $request['declarationtype'] != $traning['declarationtype'] || $request['surname'] == '' || $request['email'] == '' || $request['name'] == '' || $request['patronymic'] == '' || $request['phonename'] == ''){
+         if($request['iin'] != $traning['iin'] || $request['period'] != $traning['period'] || $request['phonename'] != '' || $request['declarationtype'] != $traning['declarationtype'] || $request['surname'] == '' || $request['email'] == '' || $request['name'] == '' || $request['phonename'] == ''){
             if($request['iin'] != $traning['iin']){ array_push($mistakes, "iin"); $miscount++;}
             if($request['period'] != $traning['period']){ array_push($mistakes, "period"); $miscount++;}
             if($request['surname'] == ''){ array_push($mistakes, "surname"); $miscount++;}
             if($request['name'] == ''){ array_push($mistakes, "name"); $miscount++;}
-            if($request['patronymic'] == ''){ array_push($mistakes, "patronymic"); $miscount++;}
             if($request['email'] == ''){ array_push($mistakes, "email"); $miscount++;}
-            if($request['phonename'] != ''){ array_push($mistakes, "phonename"); $miscount++;}
+            if($request['phonename'] == ''){ array_push($mistakes, "phonename"); $miscount++;}
             if($request['declarationtype'] != $traning['declarationtype']){ array_push($mistakes, "declarationtype"); $miscount++;}
             $string .= " Разделе А";
          }
@@ -534,6 +539,13 @@ class TraningController extends Controller
                   $countI2 = true;
                   }
          } else $countI2 = true;
+
+         if($request['i_1a'] != '' || $request['i_1b'] != '' || $request['i_1c'] != '' || $request['i_1d'] != '' || $request['i_1e'] != '' || $request['i_1f'] != '' || $request['i_1g'] != '' && $traning['i_1a'] == ''){
+         array_push($mistakes, "i_1a", "i_1b", "i_1c", "i_1d", "i_1e", "i_1f", "i_1g"); $miscount++;
+         }
+         if($request['i_2a'] != '' || $request['i_2b'] != '' || $request['i_2c'] != '' || $request['i_2d'] != '' || $request['i_2e'] != '' || $request['i_2f'] != '' || $request['i_2g'] != '' && $traning['i_2a'] == ''){
+         array_push($mistakes, "i_2a", "i_2b", "i_2c", "i_2d", "i_2e", "i_2f", "i_2g"); $miscount++;
+         }
 
          if(!$countI1 || !$countI2){
             if(!$countI1){ array_push($mistakes, "i_1a", "i_1b", "i_1c", "i_1d", "i_1e", "i_1f", "i_1g"); $miscount++;}
