@@ -131,7 +131,7 @@ class TraningSeeder extends Seeder
          ]);
 
          Traning::create([
-                     'iin' => '7312014000135',
+                     'iin' => '731201400135',
                      'period' => '2021',
                      'surname' => 'Байтурова',
                      'name' => 'А.',
