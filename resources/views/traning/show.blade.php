@@ -238,7 +238,7 @@
                         <div id="sectionC" class="row newSection" style="padding-left:15px; padding-right:15px;">
                             <div style="display:flex; width:100%; justify-content: center;">
                                 <label class="formText" for="sectionCInput" style="white-space: nowrap;">Раздел C. Общая сумма корректировки дохода в соответствии со статьей 341 НК <span><img onclick="showInfoPopupC()" class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt=""></span></label>
-                                <input type="text" class="formTextBox" style="width:10%" id="sectionCInput">
+                                <input type="text" class="formTextBox" style="width:10%"  id="c_1" name="c_1" value="{{ old('c_1') }}">
                             </div>
                         </div>
                         <!-- РАЗДЕЛ D -->
@@ -341,44 +341,33 @@
                                 <td><input type="text" class="tableInput" id="f_1b" name="f_1b" value="{{ old('f_1b') }}"></td>
                                 <td><input type="text" class="tableInput" id="f_1c" name="f_1c" value="{{ old('f_1c') }}"></td>
                                 <td><input type="text" class="tableInput" id="f_1d" name="f_1d" value="{{ old('f_1d') }}"></td>
-                                <td><input type="text" class="tableInput" id="f_1e" name="f_1e" value="{{ old('f_1e') }}"></td>
-                                <td><input type="text" class="tableInput" id="f_1f_1" name="f_1f_1" value="{{ old('f_1f_1') }}"></td>
-                                <td><input type="text" class="tableInput" id="f_1g_1" name="f_1g_1" value="{{ old('f_1g_1') }}"></td>
-                                <td><input type="text" class="tableInput" id="f_1h_1" name="f_1h_1" value="{{ old('f_1h_1') }}"></td>
-                                <td  class="iconCol"><span><img id="table_f_1_error" src="" alt=""></span></td>
+                                <td><input type="number" class="tableInput" id="f_1e" name="f_1e" value="{{ old('f_1e') }}"></td>
+                                <td id="table_f_1f"><input type="text" class="tableInput" id="f_1f" name="f_1f" value="{{ old('f_1f') }}"></td>
+                                <td id="table_f_1g"><input type="text" class="tableInput" id="f_1g" name="f_1g" value="{{ old('f_1g') }}"></td>
+                                <td id="table_f_1h"><input type="number" class="tableInput" id="f_1h" name="f_1h" value="{{ old('f_1h') }}"></td>
+                                <td id="table_f_1_img"  class="iconCol"><span><img id="table_f_1_error" src="" alt=""></span></td>
                              </tr>
                              <tr id="table_f_2">
                                 <td><input type="text" class="tableInput" id="f_2a" name="f_2a" value="{{ old('f_2a') }}"></td>
                                 <td><input type="text" class="tableInput" id="f_2b" name="f_2b" value="{{ old('f_2b') }}"></td>
                                 <td><input type="text" class="tableInput" id="f_2c" name="f_2c" value="{{ old('f_2c') }}"></td>
                                 <td><input type="text" class="tableInput" id="f_2d" name="f_2d" value="{{ old('f_2d') }}"></td>
-                                <td><input type="text" class="tableInput" id="f_2e" name="f_2e" value="{{ old('f_2e') }}"></td>
-                                <td><input type="text" class="tableInput" id="f_1f_2" name="f_1f_2" value="{{ old('f_1f_2') }}"></td>
-                                <td><input type="text" class="tableInput" id="f_1g_2" name="f_1g_2" value="{{ old('f_1g_2') }}"></td>
-                                <td><input type="text" class="tableInput" id="f_1h_2" name="f_1h_2" value="{{ old('f_1h_2') }}"></td>
-                                <td  class="iconCol"><span><img id="table_f_2_error" src="" alt=""></span></td>
+                                <td><input type="number" class="tableInput" id="f_2e" name="f_2e" value="{{ old('f_2e') }}"></td>
+                                <td id="table_f_2f"><input type="text" class="tableInput" id="f_2f" name="f_2f" value="{{ old('f_2f') }}"></td>
+                                <td id="table_f_2g"><input type="text" class="tableInput" id="f_2g" name="f_2g" value="{{ old('f_2g') }}"></td>
+                                <td id="table_f_2h"><input type="number" class="tableInput" id="f_2h" name="f_2h" value="{{ old('f_2h') }}"></td>
+                                <td id="table_f_2_img"  class="iconCol"><span><img id="table_f_2_error" src="" alt=""></span></td>
                              </tr>
                              <tr>
-                                <td><input type="text" class="tableInput" id="f_2a" name="f_2a" value="{{ old('f_2a') }}"></td>
-                                <td><input type="text" class="tableInput" id="f_2b" name="f_2b" value="{{ old('f_2b') }}"></td>
-                                <td><input type="text" class="tableInput" id="f_2c" name="f_2c" value="{{ old('f_2c') }}"></td>
-                                <td><input type="text" class="tableInput" id="f_2d" name="f_2d" value="{{ old('f_2d') }}"></td>
-                                <td><input type="text" class="tableInput" id="f_2e" name="f_2e" value="{{ old('f_2e') }}"></td>
-                                <td id="table_f_2f_1"><input type="text" class="tableInput" id="f_2f_1" name="f_2f_1" value="{{ old('f_2f_1') }}"></td>
-                                <td id="table_f_2g_1"><input type="text" class="tableInput" id="f_2g_1" name="f_2g_1" value="{{ old('f_2g_1') }}"></td>
-                                <td id="table_f_2h_1"><input type="text" class="tableInput" id="f_2h_1" name="f_2h_1" value="{{ old('f_2h_1') }}"></td>
-                                <td id="table_f_2f_1_img"  class="iconCol"><span><img id="table_f_2f_1_error" src="" alt=""></span></td>
-                             </tr>
-                             <tr>
-                                <td><input type="text" class="tableInput"></td>
-                                <td><input type="text" class="tableInput"></td>
-                                <td><input type="text" class="tableInput"></td>
-                                <td><input type="text" class="tableInput"></td>
-                                <td><input type="text" class="tableInput"></td>
-                                <td id="table_f_2f_2"><input type="text" class="tableInput" id="f_2f_2" name="f_2f_2" value="{{ old('f_2f_2') }}"></td>
-                                <td id="table_f_2g_2"><input type="text" class="tableInput" id="f_2g_2" name="f_2g_2" value="{{ old('f_2g_2') }}"></td>
-                                <td id="table_f_2h_2"><input type="text" class="tableInput" id="f_2h_2" name="f_2h_2" value="{{ old('f_2h_2') }}"></td>
-                                <td id="table_f_2f_2_img" class="iconCol"><span><img id="table_f_2f_2_error" src="" alt=""></span></td>
+                                <td><input type="text" class="tableInput" id="f_3a" name="f_3a" value="{{ old('f_3a') }}"></td>
+                                <td><input type="text" class="tableInput" id="f_3b" name="f_3b" value="{{ old('f_3b') }}"></td>
+                                <td><input type="text" class="tableInput" id="f_3c" name="f_3c" value="{{ old('f_3c') }}"></td>
+                                <td><input type="text" class="tableInput" id="f_3d" name="f_3d" value="{{ old('f_3d') }}"></td>
+                                <td><input type="number" class="tableInput" id="f_3e" name="f_3e" value="{{ old('f_3e') }}"></td>
+                                <td id="table_f_3f"><input type="text" class="tableInput" id="f_3f" name="f_3f" value="{{ old('f_3f') }}"></td>
+                                <td id="table_f_3g"><input type="text" class="tableInput" id="f_3g" name="f_3g" value="{{ old('f_3g') }}"></td>
+                                <td id="table_f_3h"><input type="number" class="tableInput" id="f_3h" name="f_3h" value="{{ old('f_3h') }}"></td>
+                                <td id="table_f_3_img"  class="iconCol"><span><img id="table_f_3_error" src="" alt=""></span></td>
                              </tr>
                              <tr>
                                 <td><input type="text" class="tableInput"></td>
@@ -386,10 +375,21 @@
                                 <td><input type="text" class="tableInput"></td>
                                 <td><input type="text" class="tableInput"></td>
                                 <td><input type="text" class="tableInput"></td>
-                                <td id="table_f_2f_3"><input type="text" class="tableInput" id="f_2f_3" name="f_2f_3" value="{{ old('f_2f_3') }}"></td>
-                                <td id="table_f_2g_3"><input type="text" class="tableInput" id="f_2g_3" name="f_2g_3" value="{{ old('f_2g_3') }}"></td>
-                                <td id="table_f_2h_3"><input type="text" class="tableInput" id="f_2h_3" name="f_2h_3" value="{{ old('f_2h_3') }}"></td>
-                                <td id="table_f_2f_3_img" class="iconCol"><span><img id="table_f_2f_3_error" src="" alt=""></span></td>
+                                <td id="table_f_4f"><input type="text" class="tableInput" id="f_4f" name="f_4f" value="{{ old('f_4f') }}"></td>
+                                <td id="table_f_4g"><input type="text" class="tableInput" id="f_4g" name="f_4g" value="{{ old('f_4g') }}"></td>
+                                <td id="table_f_4h"><input type="number" class="tableInput" id="f_4h" name="f_4h" value="{{ old('f_4h') }}"></td>
+                                <td id="table_f_4_img" class="iconCol"><span><img id="table_f_4_error" src="" alt=""></span></td>
+                             </tr>
+                             <tr>
+                                <td><input type="text" class="tableInput"></td>
+                                <td><input type="text" class="tableInput"></td>
+                                <td><input type="text" class="tableInput"></td>
+                                <td><input type="text" class="tableInput"></td>
+                                <td><input type="text" class="tableInput"></td>
+                                <td id="table_f_5f"><input type="text" class="tableInput" id="f_5f" name="f_5f" value="{{ old('f_5f') }}"></td>
+                                <td id="table_f_5g"><input type="text" class="tableInput" id="f_5g" name="f_5g" value="{{ old('f_5g') }}"></td>
+                                <td id="table_f_5h"><input type="number" class="tableInput" id="f_5h" name="f_5h" value="{{ old('f_5h') }}"></td>
+                                <td id="table_f_5_img" class="iconCol"><span><img id="table_f_5_error" src="" alt=""></span></td>
                              </tr>
                              <tr>
                                 <td><input type="text" class="tableInput"></td>
@@ -1847,6 +1847,13 @@
               document.getElementById("imgB").src = "{{ asset('img/errorDot.svg') }}";
               }
 
+              if(mistakes[i] == 'c_1'){
+              document.getElementById("imgC").src = "{{ asset('img/errorDot.svg') }}";
+              }
+              if(mistakes[i] == 'd_1'){
+              document.getElementById("imgD").src = "{{ asset('img/errorDot.svg') }}";
+              }
+
               if(mistakes[i] == 'e_1'){
               document.getElementById("table_e_1").className = "error";
               document.getElementById("table_e_1_error").src = "{{ asset('img/errorIcon2.svg') }}";
@@ -1889,26 +1896,40 @@
               document.getElementById("table_f_2").className = "error";
               document.getElementById("table_f_2_error").src = "{{ asset('img/errorIcon2.svg') }}";
               document.getElementById("imgF").src = "{{ asset('img/errorDot.svg') }}";
-              }if(mistakes[i] == 'f_2f_1'){
-              document.getElementById("table_f_2f_1").className = "error";
-              document.getElementById("table_f_2g_1").className = "error";
-              document.getElementById("table_f_2h_1").className = "error";
-              document.getElementById("table_f_2f_1_img").style = "background-color: #FFEAEA";
-              document.getElementById("table_f_2f_1_error").src = "{{ asset('img/errorIcon2.svg') }}";
+              }if(mistakes[i] == 'f_1f'){
+              document.getElementById("table_f_1f").className = "error";
+              document.getElementById("table_f_1g").className = "error";
+              document.getElementById("table_f_1h").className = "error";
+              document.getElementById("table_f_1_img").style = "background-color: #FFEAEA";
+              document.getElementById("table_f_1_error").src = "{{ asset('img/errorIcon2.svg') }}";
               document.getElementById("imgF").src = "{{ asset('img/errorDot.svg') }}";
-              }if(mistakes[i] == 'f_2f_2'){
-              document.getElementById("table_f_2f_2").className = "error";
-              document.getElementById("table_f_2g_2").className = "error";
-              document.getElementById("table_f_2h_2").className = "error";
-              document.getElementById("table_f_2f_2_img").style = "background-color: #FFEAEA";
-              document.getElementById("table_f_2f_2_error").src = "{{ asset('img/errorIcon2.svg') }}";
+              }if(mistakes[i] == 'f_2f'){
+              document.getElementById("table_f_2f").className = "error";
+              document.getElementById("table_f_2g").className = "error";
+              document.getElementById("table_f_2h").className = "error";
+              document.getElementById("table_f_2_img").style = "background-color: #FFEAEA";
+              document.getElementById("table_f_2_error").src = "{{ asset('img/errorIcon2.svg') }}";
               document.getElementById("imgF").src = "{{ asset('img/errorDot.svg') }}";
-              }if(mistakes[i] == 'f_2f_3'){
-              document.getElementById("table_f_2f_3").className = "error";
-              document.getElementById("table_f_2g_3").className = "error";
-              document.getElementById("table_f_2h_3").className = "error";
-              document.getElementById("table_f_2f_3_img").style = "background-color: #FFEAEA";
-              document.getElementById("table_f_2f_3_error").src = "{{ asset('img/errorIcon2.svg') }}";
+              }if(mistakes[i] == 'f_3f'){
+              document.getElementById("table_f_3f").className = "error";
+              document.getElementById("table_f_3g").className = "error";
+              document.getElementById("table_f_3h").className = "error";
+              document.getElementById("table_f_3_img").style = "background-color: #FFEAEA";
+              document.getElementById("table_f_3_error").src = "{{ asset('img/errorIcon2.svg') }}";
+              document.getElementById("imgF").src = "{{ asset('img/errorDot.svg') }}";
+              }if(mistakes[i] == 'f_4f'){
+              document.getElementById("table_f_4f").className = "error";
+              document.getElementById("table_f_4g").className = "error";
+              document.getElementById("table_f_4h").className = "error";
+              document.getElementById("table_f_4_img").style = "background-color: #FFEAEA";
+              document.getElementById("table_f_4_error").src = "{{ asset('img/errorIcon2.svg') }}";
+              document.getElementById("imgF").src = "{{ asset('img/errorDot.svg') }}";
+              }if(mistakes[i] == 'f_5f'){
+              document.getElementById("table_f_5f").className = "error";
+              document.getElementById("table_f_5g").className = "error";
+              document.getElementById("table_f_5h").className = "error";
+              document.getElementById("table_f_5_img").style = "background-color: #FFEAEA";
+              document.getElementById("table_f_5_error").src = "{{ asset('img/errorIcon2.svg') }}";
               document.getElementById("imgF").src = "{{ asset('img/errorDot.svg') }}";
               }
 
