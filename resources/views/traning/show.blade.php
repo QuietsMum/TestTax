@@ -238,13 +238,13 @@
                         <div id="sectionC" class="row newSection" style="padding-left:15px; padding-right:15px;">
                             <div style="display:flex; width:100%; justify-content: center;">
                                 <label class="formText" for="sectionCInput" style="white-space: nowrap;">Раздел C. Общая сумма корректировки дохода в соответствии со статьей 341 НК <span><img onclick="showInfoPopupC()" class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt=""></span></label>
-                                <input type="text" class="formTextBox" style="width:10%"  id="c_1" name="c_1" value="{{ old('c_1') }}">
+                                <input type="number" class="formTextBox" style="width:10%"  id="c_1" name="c_1" value="{{ old('c_1') }}">
                             </div>
                         </div>
                         <!-- РАЗДЕЛ D -->
                         <div id="sectionD" class="row newSection" style="padding-left:15px; padding-right:15px;">
                         <div style="display:flex; width:100%; justify-content: center;">
-                            <label class="formText" for="sectionDInput" style="white-space: nowrap;">Раздел D. Сумма налоговых вычетов, не примененных налоговым агентом <span><img onclick="showInfoPopupD()" class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt=""></span></label>
+                            <label class="formText" for="d_1" style="white-space: nowrap;">Раздел D. Сумма налоговых вычетов, не примененных налоговым агентом <span><img onclick="showInfoPopupD()" class="infoBtn" src="{{ asset('img/infoIcon.svg') }}" alt=""></span></label>
                             <input type="number" class="formTextBox" style="width:10%" id="d_1" name="d_1" value="{{ old('d_1') }}">
                         </div>
                         </div>
