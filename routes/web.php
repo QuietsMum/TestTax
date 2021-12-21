@@ -15,8 +15,11 @@ use App\Http\Controllers\CustomAuthController;
 |
 */
 
+Route::get('/favicon.ico', function ($id) {
+    return storage_path('favicon.ico');
+});
 
-Route::group(['middleware' => ['auth']], function() {
+Route::group(['middleware' => ['auth']], function () {
     Route::get('/training', [TraningController::class, 'index'])->name('training');
     Route::post('/training/{id}', [TraningController::class, 'show'])->name('training_show');
     Route::get('/training/{id}', [TraningController::class, 'show'])->name('training_show');
