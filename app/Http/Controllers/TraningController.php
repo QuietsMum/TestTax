@@ -58,7 +58,7 @@ class TraningController extends Controller
             if($request['name'] == ''){ array_push($mistakes, "name"); $miscount++;}
             if($request['email'] == ''){ array_push($mistakes, "email"); $miscount++;}
             if($request['phonename'] == ''){ array_push($mistakes, "phonename"); $miscount++;}
-            if($request['declarationtype'] != $traning['declarationtype']){ array_push($mistakes, "declarationtype"); $miscount++;}
+            if($request['declarationtype'] != $traning['declarationtype']){ $miscount++;}
             $string .= " Разделе А";
          }
          if($request['b_1'] != $traning['b_1'] || $request['b_2'] != $traning['b_2'] || $request['b_2a'] != $traning['b_2a'] || $request['b_2b'] != $traning['b_2b'] || $request['b_2c'] != $traning['b_2c'] || $request['b_2d'] != $traning['b_2d']){
