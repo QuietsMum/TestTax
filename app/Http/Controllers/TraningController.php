@@ -391,129 +391,143 @@ class TraningController extends Controller
             $string .= " Разделе E";
          }
 
-         $countF1 = false;
-         if($traning['f_1c'] != ''){
+         $countF11 = false;
+         if($request['f_1c'] != '' || $traning['f_1c'] != ''){
           if($traning['f_1c'] == $request['f_1c'] && $traning['f_1e'] == $request['f_1e']){
-                   $countF1 = true;
+                   $countF11 = true;
                   }
                   if($traning['f_1c'] == $request['f_2c'] && $traning['f_1e'] == $request['f_2e']){
-                   $countF1 = true;
+                   $countF11 = true;
                   }
-         } else $countF1 = true;
+         } else $countF11 = true;
 
-         $countF11 = false;
-            if($traning['f_2c'] != ''){
+         $countF12 = false;
+            if($request['f_2c'] != '' || $traning['f_2c'] != ''){
                if($traning['f_2c'] == $request['f_1c'] && $traning['f_2e'] == $request['f_1e']){
-                      $countF11 = true;
+                      $countF12 = true;
                      }
                      if($traning['f_2c'] == $request['f_2c'] && $traning['f_2e'] == $request['f_2e']){
-                      $countF11 = true;
+                      $countF12 = true;
                      }
-                 } else $countF11 = true;
+                     if($traning['f_2c'] == $request['f_3c'] && $traning['f_2e'] == $request['f_3e']){
+                      $countF12 = true;
+                     }
+                 } else $countF12 = true;
 
-         $countF2 = false;
-         if($traning['f_1g_1'] != ''){
-          if($traning['f_1g_1'] == $request['f_1g_1'] && $traning['f_1h_1'] == $request['f_1h_1']){
-                  $countF2 = true;
+         $countF13 = false;
+            if($request['f_3c'] != '' || $traning['f_3c'] != ''){
+               if($traning['f_1c'] == $request['f_3c'] && $traning['f_1e'] == $request['f_3e']){
+                      $countF13 = true;
+                     }
+                     if($traning['f_2c'] == $request['f_3c'] && $traning['f_2e'] == $request['f_3e']){
+                      $countF13 = true;
+                     }
+                 } else $countF13 = true;
+
+         $countF21 = false;
+         if($traning['f_1g'] != '' || $traning['f_1h'] != ''){
+          if($traning['f_1g'] == $request['f_1g'] && $traning['f_1h'] == $request['f_1h']){
+                  $countF21 = true;
                   }
-          if($traning['f_1g_1'] == $request['f_1g_2'] && $traning['f_1h_1'] == $request['f_1h_2']){
-                  $countF2 = true;
+          if($traning['f_1g'] == $request['f_2g'] && $traning['f_1h'] == $request['f_2h']){
+                  $countF21 = true;
                   }
-          if($traning['f_1g_1'] == $request['f_2g_1'] && $traning['f_1h_1'] == $request['f_2h_1']){
-                  $countF2 = true;
+          if($traning['f_1g'] == $request['f_3g'] && $traning['f_1h'] == $request['f_3h']){
+                  $countF21 = true;
                   }
-          if($traning['f_1g_1'] == $request['f_2g_2'] && $traning['f_1h_1'] == $request['f_2h_2']){
-                  $countF2 = true;
+          if($traning['f_1g'] == $request['f_4g'] && $traning['f_1h'] == $request['f_4h']){
+                  $countF21 = true;
                   }
-          if($traning['f_1g_1'] == $request['f_2g_3'] && $traning['f_1h_1'] == $request['f_2h_3']){
-                  $countF2 = true;
+          if($traning['f_1g'] == $request['f_5g'] && $traning['f_1h'] == $request['f_5h']){
+                  $countF21 = true;
                   }
-         } else $countF2 = true;
+         } else $countF21 = true;
 
          $countF22 = false;
-         if($traning['f_1g_2'] != ''){
-                  if($traning['f_1g_2'] == $request['f_1g_1'] && $traning['f_1h_2'] == $request['f_1h_1']){
+         if($traning['f_2g'] != '' || $traning['f_2h'] != ''){
+                  if($traning['f_2g'] == $request['f_1g'] && $traning['f_2h'] == $request['f_1h']){
                   $countF22 = true;
                   }
-                  if($traning['f_1g_2'] == $request['f_1g_2'] && $traning['f_1h_2'] == $request['f_1h_2']){
+                  if($traning['f_2g'] == $request['f_2g'] && $traning['f_2h'] == $request['f_2h']){
                   $countF22 = true;
                   }
-                  if($traning['f_1g_2'] == $request['f_2g_1'] && $traning['f_1h_2'] == $request['f_2h_1']){
+                  if($traning['f_2g'] == $request['f_3g'] && $traning['f_2h'] == $request['f_3h']){
                   $countF22 = true;
                   }
-                  if($traning['f_1g_2'] == $request['f_2g_2'] && $traning['f_1h_2'] == $request['f_2h_2']){
+                  if($traning['f_2g'] == $request['f_4g'] && $traning['f_2h'] == $request['f_4h']){
                   $countF22 = true;
                   }
-                  if($traning['f_1g_2'] == $request['f_2g_3'] && $traning['f_1h_2'] == $request['f_2h_3']){
+                  if($traning['f_2g'] == $request['f_5g'] && $traning['f_2h'] == $request['f_5h']){
                   $countF22 = true;
                   }
          } else $countF22 = true;
 
          $countF23 = false;
-         if($traning['f_2g_1'] != ''){
-                  if($traning['f_2g_1'] == $request['f_1g_1'] && $traning['f_2h_1'] == $request['f_1h_1']){
+         if($traning['f_3g'] != '' || $traning['f_3h'] != ''){
+                  if($traning['f_3g'] == $request['f_1g'] && $traning['f_3h'] == $request['f_1h']){
                   $countF23 = true;
                   }
-                  if($traning['f_2g_1'] == $request['f_1g_2'] && $traning['f_2h_1'] == $request['f_1h_2']){
+                  if($traning['f_3g'] == $request['f_2g'] && $traning['f_3h'] == $request['f_2h']){
                   $countF23 = true;
                   }
-                  if($traning['f_2g_1'] == $request['f_2g_1'] && $traning['f_2h_1'] == $request['f_2h_1']){
+                  if($traning['f_3g'] == $request['f_3g'] && $traning['f_3h'] == $request['f_3h']){
                   $countF23 = true;
                   }
-                  if($traning['f_2g_1'] == $request['f_2g_2'] && $traning['f_2h_1'] == $request['f_2h_2']){
+                  if($traning['f_3g'] == $request['f_4g'] && $traning['f_3h'] == $request['f_4h']){
                   $countF23 = true;
                   }
-                  if($traning['f_2g_1'] == $request['f_2g_3'] && $traning['f_2h_1'] == $request['f_2h_3']){
+                  if($traning['f_3g'] == $request['f_5g'] && $traning['f_3h'] == $request['f_5h']){
                   $countF23 = true;
                   }
          } else $countF23 = true;
 
          $countF24 = false;
-         if($traning['f_2g_2'] != ''){
-                  if($traning['f_2g_2'] == $request['f_1g_1'] && $traning['f_2h_2'] == $request['f_1h_1']){
+         if($traning['f_4g'] != '' || $traning['f_4h'] != ''){
+                  if($traning['f_4g'] == $request['f_1g'] && $traning['f_4h'] == $request['f_1h']){
                   $countF24 = true;
                   }
-                  if($traning['f_2g_2'] == $request['f_1g_2'] && $traning['f_2h_2'] == $request['f_1h_2']){
+                  if($traning['f_4g'] == $request['f_2g'] && $traning['f_4h'] == $request['f_2h']){
                   $countF24 = true;
                   }
-                  if($traning['f_2g_2'] == $request['f_2g_1'] && $traning['f_2h_2'] == $request['f_2h_1']){
+                  if($traning['f_4g'] == $request['f_3g'] && $traning['f_4h'] == $request['f_3h']){
                   $countF24 = true;
                   }
-                  if($traning['f_2g_2'] == $request['f_2g_2'] && $traning['f_2h_2'] == $request['f_2h_2']){
+                  if($traning['f_4g'] == $request['f_4g'] && $traning['f_4h'] == $request['f_4h']){
                   $countF24 = true;
                   }
-                  if($traning['f_2g_2'] == $request['f_2g_3'] && $traning['f_2h_2'] == $request['f_2h_3']){
+                  if($traning['f_4g'] == $request['f_5g'] && $traning['f_4h'] == $request['f_5h']){
                   $countF24 = true;
                   }
          } else $countF24 = true;
 
          $countF25 = false;
-         if($traning['f_2g_3'] != ''){
-                  if($traning['f_2g_3'] == $request['f_1g_1'] && $traning['f_2h_3'] == $request['f_1h_1']){
+         if($traning['f_5g'] != '' || $traning['f_5h'] != ''){
+                  if($traning['f_5g'] == $request['f_1g'] && $traning['f_5h'] == $request['f_1h']){
                   $countF25 = true;
                   }
-                  if($traning['f_2g_3'] == $request['f_1g_2'] && $traning['f_2h_3'] == $request['f_1h_2']){
+                  if($traning['f_5g'] == $request['f_2g'] && $traning['f_5h'] == $request['f_2h']){
                   $countF25 = true;
                   }
-                  if($traning['f_2g_3'] == $request['f_2g_1'] && $traning['f_2h_3'] == $request['f_2h_1']){
+                  if($traning['f_5g'] == $request['f_3g'] && $traning['f_5h'] == $request['f_3h']){
                   $countF25 = true;
                   }
-                  if($traning['f_2g_3'] == $request['f_2g_2'] && $traning['f_2h_3'] == $request['f_2h_2']){
+                  if($traning['f_5g'] == $request['f_4g'] && $traning['f_5h'] == $request['f_4h']){
                   $countF25 = true;
                   }
-                  if($traning['f_2g_3'] == $request['f_2g_3'] && $traning['f_2h_3'] == $request['f_2h_3']){
+                  if($traning['f_5g'] == $request['f_5g'] && $traning['f_5h'] == $request['f_5h']){
                   $countF25 = true;
                   }
          } else $countF25 = true;
-//          dump($countF1, $countF11, $countF2, $countF22, $countF23, $countF24, $countF25);
-         if(!$countF1 || !$countF11 || !$countF2 || !$countF22 || !$countF23 || !$countF24 || !$countF25){
-            if(!$countF1){ array_push($mistakes, "f_1a", "f_1b", "f_1c", "f_1d", "f_1e"); $miscount++;}
-            if(!$countF11){ array_push($mistakes, "f_2a", "f_2b", "f_2c", "f_2d", "f_2e"); $miscount++;}
-            if(!$countF2){ array_push($mistakes,  "f_1f_1", "f_1g_1", "f_1h_1"); $miscount++;}
-            if(!$countF22){ array_push($mistakes, "f_1f_2", "f_1g_2", "f_1h_2"); $miscount++;}
-            if(!$countF23){ array_push($mistakes, "f_2f_1", "f_2g_1", "f_2h_1"); $miscount++;}
-            if(!$countF24){ array_push($mistakes, "f_2f_2", "f_2g_2", "f_2h_2"); $miscount++;}
-            if(!$countF25){ array_push($mistakes, "f_2f_3", "f_2g_3", "f_2h_3"); $miscount++;}
+ //         dump($countF11, $countF12, $countF13, $countF21, $countF22, $countF23, $countF24, $countF25);
+         if(!$countF11 || !$countF12 || !$countF13 || !$countF21 || !$countF22 || !$countF23 || !$countF24 || !$countF25){
+            if(!$countF11){ array_push($mistakes, "f_1a", "f_1b", "f_1c", "f_1d", "f_1e"); $miscount++;}
+            if(!$countF12){ array_push($mistakes, "f_2a", "f_2b", "f_2c", "f_2d", "f_2e"); $miscount++;}
+            if(!$countF13){ array_push($mistakes, "f_3a", "f_3b", "f_3c", "f_3d", "f_3e"); $miscount++;}
+            if(!$countF21){ array_push($mistakes,  "f_1f", "f_1g", "f_1h"); $miscount++;}
+            if(!$countF22){ array_push($mistakes, "f_2f", "f_2g", "f_2h"); $miscount++;}
+            if(!$countF23){ array_push($mistakes, "f_3f", "f_3g", "f_3h"); $miscount++;}
+            if(!$countF24){ array_push($mistakes, "f_4f", "f_4g", "f_4h"); $miscount++;}
+            if(!$countF25){ array_push($mistakes, "f_5f", "f_5g", "f_5h"); $miscount++;}
             $string .= " Разделе F";
          }
          if($id == 2 || $id == 5) {
@@ -541,20 +555,20 @@ class TraningController extends Controller
          }
          $countI1 = false;
          if($traning['i_1a'] != ''){
-            if($traning['i_1a'] == $request['i_1a'] && $traning['i_1c'] == $request['i_1c'] && $traning['i_1f'] == $request['i_1f'] && $traning['i_1g'] == $request['i_1g']){
+            if($traning['i_1c'] == $request['i_1c'] && $traning['i_1f'] == $request['i_1f'] && $traning['i_1g'] == $request['i_1g']){
                   $countI1 = true;
             }
-            if($traning['i_1a'] == $request['i_2a'] && $traning['i_1c'] == $request['i_2c'] && $traning['i_1f'] == $request['i_2f'] && $traning['i_1g'] == $request['i_2g']){
+            if($traning['i_1c'] == $request['i_2c'] && $traning['i_1f'] == $request['i_2f'] && $traning['i_1g'] == $request['i_2g']){
                      $countI1 = true;
             }
          } else $countI1 = true;
 
          $countI2 = false;
          if($traning['i_2a'] != ''){
-           if($traning['i_2a'] == $request['i_1a'] && $traning['i_2c'] == $request['i_1c'] && $traning['i_2f'] == $request['i_1f'] && $traning['i_2g'] == $request['i_1g']){
+           if($traning['i_2c'] == $request['i_1c'] && $traning['i_2f'] == $request['i_1f'] && $traning['i_2g'] == $request['i_1g']){
                   $countI2 = true;
                   }
-           if($traning['i_2a'] == $request['i_2a'] && $traning['i_2c'] == $request['i_2c'] && $traning['i_2f'] == $request['i_2f'] && $traning['i_2g'] == $request['i_2g']){
+           if($traning['i_2c'] == $request['i_2c'] && $traning['i_2f'] == $request['i_2f'] && $traning['i_2g'] == $request['i_2g']){
                   $countI2 = true;
                   }
          } else $countI2 = true;
