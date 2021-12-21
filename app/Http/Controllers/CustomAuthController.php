@@ -13,39 +13,44 @@ class CustomAuthController extends Controller
 
     public function index()
     {
-        return view('auth.login');
+        if (Auth::check()) {
+            return redirect(route('index'));
+        } else {
+            return view('auth.login');
+        }
     }
 
 
     public function customLogin(Request $request)
-       {
-//             $request->validate([
-//                      'name' => 'required',
-//                      'password' => 'required'
-//                  ]);
+    {
+        //             $request->validate([
+        //                      'name' => 'required',
+        //                      'password' => 'required'
+        //                  ]);
 
-                 $credentials = $request->except(['_token']);
+        $credentials = $request->except(['_token']);
 
-//                  $user = User::where('name',$request->name)->first();
+        //                  $user = User::where('name',$request->name)->first();
 
-                 if (auth()->attempt($credentials)) {
+        if (auth()->attempt($credentials)) {
 
-                     return redirect()->route('training')->withSuccess('Access');
-
-                 }else{
-                     session()->flash('message', 'Invalid credentials');
-                     return redirect()->back();
-                 }
-       }
+            if (!session()->has('url.intended')) {
+                session(['url.intended' => url()->previous()]);
+            }
+            return redirect(session('url.intended'))->withSuccess('Access');
+        } else {
+            session()->flash('message', 'Invalid credentials');
+            return redirect()->back();
+        }
+    }
 
 
     public function dashboard()
     {
-        if(Auth::check()){
+        if (Auth::check()) {
             return view('dashboard');
         }
 
         return redirect("login")->withSuccess('You are not allowed to access');
     }
-
 }

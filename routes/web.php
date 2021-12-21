@@ -20,6 +20,9 @@ Route::get('/favicon.ico', function ($id) {
 });
 
 Route::group(['middleware' => ['auth']], function () {
+    Route::get('/', function () {
+        return view('index');
+    })->name('index');
     Route::get('/training', [TraningController::class, 'index'])->name('training');
     Route::post('/training/{id}', [TraningController::class, 'show'])->name('training_show');
     Route::get('/training/{id}', [TraningController::class, 'show'])->name('training_show');
@@ -29,13 +32,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/test/{id}', [TraningController::class, 'show2'])->name('test_show');
     Route::post('/test/{id}', [TraningController::class, 'store2'])->name('test_store');
     Route::get('/info', [TraningController::class, 'info'])->name('info');
+    Route::get('/admin', function () {
+        return view('admin');
+    })->name('admin');
 });
 
 Route::get('/login', [CustomAuthController::class, 'index'])->name('login');
 Route::post('/login', [CustomAuthController::class, 'customLogin'])->name('login');
-Route::get('/', function () {
-    return redirect(route('login'));
-});
-Route::get('/admin', function () {
-    return view('admin');
-})->name('admin');
