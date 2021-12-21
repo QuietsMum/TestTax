@@ -64,7 +64,7 @@
            </div>
            <div class="col-sm-7 rightBox">
                 <div style="text-align: center;">
-                    <p style="font-size: 24px; font-weight: 700; color:#2C2567; margin-top: 90px;">Ознакомьтесь с правилами </br>и рекомендациями</p>
+                    <p style="font-size: 24px; font-weight: 700; color:#2C2567; margin-top: 90px;">Ознакомьтесь с правилами <br>и рекомендациями</p>
                 </div>
                 <div class="whiteBox4">
                     <ul>

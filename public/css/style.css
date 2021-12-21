@@ -341,7 +341,6 @@ body {height: 100%;}
         margin: auto;
         margin-top: 20px;
         text-align: center;
-        height: 55vh;
         overflow-y: scroll;
         font-family: 'Times New Roman', Times, serif!important;
     }
@@ -400,7 +399,8 @@ th, td {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    max-width: 500px;
+    max-width: 400px;
+
 }
 .infoBtn {
     cursor: pointer;
@@ -474,7 +474,7 @@ th, td {
     overflow-y: auto;
 }
 .error {
-    background-color: #FFEAEA;
+    background-color: #ffcfcf;
 }
 .iconCol {
     border:none;
@@ -594,7 +594,7 @@ th, td {
         margin: auto;
         margin-top: 20px;
         text-align: center;
-        height: 41vh;
+        height: 41vh!important;
         overflow-y: scroll;
         font-family: 'Times New Roman', Times, serif!important;
     }
@@ -616,9 +616,6 @@ th, td {
         padding: 7px!important;
         margin-top: 5%!important;
     }
-    .selectCaseText {
-        max-width: 400px!important;
-    }
     .checkboxSmall {
         width: unset!important;
     }
@@ -627,6 +624,12 @@ th, td {
     }
     .mainBg {
         height: 720px!important;
+    }
+}
+@media (min-width: 1550px) {
+
+    .selectCaseText {
+        max-width: 500px!important;
     }
 }
 @media (min-width: 1921px){ 
