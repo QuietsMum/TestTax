@@ -628,6 +628,8 @@ class TraningController extends Controller
             $misDB = [14, 27, 26, 41, 15, 14, 12, 13, 9, 22];
             $mispercent = $miscount*100/$misDB[$id-1];
             $percent = 100 - $mispercent;
+            $testuserID = session("testuserID");
+            UsersResults::where('id', $testuserID)->update(['result' => $percent]);
              return view('tests.show2', [
                                       'traning' => Traning::findOrFail($id),
                                       'id' => $id,
@@ -660,14 +662,15 @@ class TraningController extends Controller
 
       public function show2(Request $request, $id)
         {
-             UsersResults::create([
+             $testuserID = UsersResults::create([
                                         'code' => $request['code'],
                                         'iin' => $request['iin'],
                                         'fio' => $request['fio'],
                                         'depart' => $request['depart'],
                                         'case' => $id,
                                         'result' => '',
-                                     ]);
+                                     ])->id;
+             session(["testuserID"=>$testuserID]);
              return view('tests.show2', [
                          'tests' => Traning::findOrFail($id),
                          'disc' => TraningDisc::findOrFail($id),

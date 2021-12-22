@@ -1829,6 +1829,16 @@
                     } else document.getElementById("percentimg").src= "{{ asset('img/errorIcon.svg') }}";
                     showPopupComplete();
         @endif
+         $(document).ready(function() {
+                    $(window).keydown(function(event){
+                        if(event.keyCode == 116) {
+                        showInfoPopupCheck();
+//                             event.preventDefault();
+                            return false;
+                        }
+                    });
+                });
+
     </script>
 </body>
 </html>
